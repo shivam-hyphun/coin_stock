@@ -1,0 +1,71 @@
+/* add Geist-Regular.otf Geist-Regular.woff2 font in my web */
+
+@font-face {
+    font-family: 'Geist-Regular';
+    src: url('../fonts/Geist-Regular.otf') format('opentype'),
+        url('../fonts/Geist-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* write for all other variants */
+
+/* medium */
+
+@font-face {
+    font-family: 'Geist-Medium';
+    src: url('../fonts/Geist-Medium.otf') format('opentype'),
+        url('../fonts/Geist-Medium.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* bold */
+
+@font-face {
+    font-family: 'Geist-Bold';
+    src: url('../fonts/Geist-Bold.otf') format('opentype'),
+        url('../fonts/Geist-Bold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* italic */
+
+@font-face {
+    font-family: 'Geist-Italic';
+    src: url('../fonts/Geist-Italic.otf') format('opentype'),
+        url('../fonts/Geist-Italic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* bold italic */
+
+@font-face {
+    font-family: 'Geist-BoldItalic';
+    src: url('../fonts/Geist-BoldItalic.otf') format('opentype'),
+        url('../fonts/Geist-BoldItalic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* semibold */
+
+@font-face {
+    font-family: 'Geist-SemiBold';
+    src: url('../fonts/Geist-SemiBold.otf') format('opentype'),
+        url('../fonts/Geist-SemiBold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* thin */
+
+@font-face {
+    font-family: 'Geist-Thin';
+    src: url('../fonts/Geist-Thin.otf') format('opentype'),
+        url('../fonts/Geist-Thin.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
