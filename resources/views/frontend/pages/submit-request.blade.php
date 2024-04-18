@@ -31,14 +31,14 @@
             <div class="grid w-full grid-cols-1 gap-2">
                 <div class="w-full">
                     <div>
-                        <label for="email" class="flex flex-wrap text-sm text-gray-500 dark:text-gray-300">Please review
+                        <label for="email" class="flex flex-wrap text-sm text-gray-500">Please review
                             ALL the
                             options and select the CORRECT form to ensure that your request gets routed
                             to the correct team. Please submit well-structured, actionable, and complete
                             information.</label>
 
                         <input type="email" placeholder="john@example.com"
-                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
+                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40" />
 
                         <p class="mt-3 flex flex-wrap text-xs text-gray-400">Lorem ipsum dolor sit amet consectetur
                             adipisicing elit.</p>
@@ -46,11 +46,11 @@
                 </div>
                 <div class="w-full">
                     <div>
-                        <label for="email" class="flex flex-wrap text-sm text-gray-500 dark:text-gray-300">Your email
+                        <label for="email" class="flex flex-wrap text-sm text-gray-500">Your email
                             address</label>
 
                         <input type="email" placeholder="john@example.com"
-                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
+                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40" />
 
                         <p class="mt-3 flex flex-wrap text-xs text-gray-400">Lorem ipsum dolor sit amet consectetur
                             adipisicing elit.</p>
@@ -58,12 +58,12 @@
                 </div>
                 <div class="w-full">
                     <div>
-                        <label for="email" class="flex flex-wrap text-sm text-gray-500 dark:text-gray-300">Subject Field
+                        <label for="email" class="flex flex-wrap text-sm text-gray-500">Subject Field
                             (Please
                             adhere to the format)</label>
 
                         <input type="email" placeholder="john@example.com"
-                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
+                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40" />
 
                         <p class="mt-3 flex flex-wrap text-xs text-gray-400">"Please refer to this format as an
                             example.
@@ -73,11 +73,11 @@
                 </div>
                 <div class="w-full">
                     <div>
-                        <label for="email" class="flex flex-wrap text-sm text-gray-500 dark:text-gray-300">Terms &
+                        <label for="email" class="flex flex-wrap text-sm text-gray-500">Terms &
                             Conditions</label>
 
                         <input type="email" placeholder="john@example.com"
-                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
+                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40" />
 
                         <p class="mt-3 flex flex-wrap text-xs text-gray-400">I acknowledge that CoinMarketCap
                             reserves
@@ -91,11 +91,11 @@
                 </div>
                 <div class="w-full">
                     <div>
-                        <label for="email" class="flex flex-wrap text-sm text-gray-500 dark:text-gray-300">Marketing
+                        <label for="email" class="flex flex-wrap text-sm text-gray-500">Marketing
                             consent</label>
 
                         <input type="email" placeholder="john@example.com"
-                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
+                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40" />
 
                         <p class="mt-3 flex flex-wrap text-xs text-gray-400">I agree to receiving marketing related
                             communications from CoinMarketCap's team, including updates, news, events, features and
@@ -104,12 +104,12 @@
                 </div>
                 <div class="w-full">
                     <div>
-                        <label for="email" class="flex flex-wrap text-sm text-gray-500 dark:text-gray-300">Relationship
+                        <label for="email" class="flex flex-wrap text-sm text-gray-500">Relationship
                             with the
                             Project</label>
 
                         <input type="email" placeholder="john@example.com"
-                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
+                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40" />
 
                         <p class="mt-3 flex flex-wrap text-xs text-gray-400">Please describe your relationship with
                             the
@@ -118,11 +118,11 @@
                 </div>
                 <div class="w-full">
                     <div>
-                        <label for="email" class="flex flex-wrap text-sm text-gray-500 dark:text-gray-300">Project Launch
+                        <label for="email" class="flex flex-wrap text-sm text-gray-500">Project Launch
                             Date</label>
 
                         <input type="email" placeholder="john@example.com"
-                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
+                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40" />
 
                         <p class="mt-3 flex flex-wrap text-xs text-gray-400">The date the project launched (e.g.
                             token
@@ -132,11 +132,11 @@
                 </div>
                 <div class="w-full">
                     <div>
-                        <label for="email" class="flex flex-wrap text-sm text-gray-500 dark:text-gray-300">Project
+                        <label for="email" class="flex flex-wrap text-sm text-gray-500">Project
                             Name</label>
 
                         <input type="email" placeholder="john@example.com"
-                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
+                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40" />
 
                         <p class="mt-3 flex flex-wrap text-xs text-gray-400">Please provide the FULL name of the
                             project
@@ -145,24 +145,24 @@
                 </div>
                 <div class="w-full">
                     <div>
-                        <label for="email" class="flex flex-wrap text-sm text-gray-500 dark:text-gray-300">Project
+                        <label for="email" class="flex flex-wrap text-sm text-gray-500">Project
                             Ticker/Symbol
                             (Do not put a $ sign if there is none in the ticker)</label>
 
                         <input type="email" placeholder="john@example.com"
-                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
+                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40" />
 
                         <p class="mt-3 flex flex-wrap text-xs text-gray-400">(e.g. BTC, ETH, XRP, HOT)</p>
                     </div>
                 </div>
                 <div class="w-full">
                     <div>
-                        <label for="email" class="flex flex-wrap text-sm text-gray-500 dark:text-gray-300">Cryptoasset
+                        <label for="email" class="flex flex-wrap text-sm text-gray-500">Cryptoasset
                             Tags -
                             Sector/Categories</label>
 
                         <input type="email" placeholder="john@example.com"
-                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
+                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40" />
 
                         <p class="mt-3 flex flex-wrap text-xs text-gray-400">You may select more than one tag.
                             Doing so
@@ -171,11 +171,11 @@
                 </div>
                 <div class="w-full">
                     <div>
-                        <label for="email" class="flex flex-wrap text-sm text-gray-500 dark:text-gray-300">One-liner
+                        <label for="email" class="flex flex-wrap text-sm text-gray-500">One-liner
                             description</label>
 
                         <input type="email" placeholder="john@example.com"
-                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
+                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40" />
 
                         <p class="mt-3 flex flex-wrap text-xs text-gray-400">Provide a snappy and concise tagline
                             for
@@ -185,12 +185,12 @@
                 </div>
                 <div class="w-full">
                     <div>
-                        <label for="email" class="flex flex-wrap text-sm text-gray-500 dark:text-gray-300">Detailed
+                        <label for="email" class="flex flex-wrap text-sm text-gray-500">Detailed
                             Project
                             Description (Cryptoasset)</label>
 
                         <input type="email" placeholder="john@example.com"
-                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
+                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40" />
 
                         <p class="mt-3 flex flex-wrap text-xs text-gray-400">"Our data shows that our users spend
                             more
@@ -207,12 +207,12 @@
                 </div>
                 <div class="w-full">
                     <div>
-                        <label for="email" class="flex flex-wrap text-sm text-gray-500 dark:text-gray-300">Platform
+                        <label for="email" class="flex flex-wrap text-sm text-gray-500">Platform
                             (e.g. EOS,
                             NEO, Ethereum, proprietary blockchain).</label>
 
                         <input type="email" placeholder="john@example.com"
-                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
+                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40" />
 
                         <p class="mt-3 flex flex-wrap text-xs text-gray-400">Please specify all token platforms
                             that
@@ -222,11 +222,11 @@
                 </div>
                 <div class="w-full">
                     <div>
-                        <label for="email" class="flex flex-wrap text-sm text-gray-500 dark:text-gray-300">Chain
+                        <label for="email" class="flex flex-wrap text-sm text-gray-500">Chain
                             Fork(optional)</label>
 
                         <input type="email" placeholder="john@example.com"
-                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
+                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40" />
 
                         <p class="mt-3 flex flex-wrap text-xs text-gray-400">Specify the chain/asset that the was
                             project forked from (e.g. Bitcoin Cash was forked from Bitcoin and had the same blocks/history
@@ -238,11 +238,11 @@
                 <div class="w-full">
                     <div>
                         <label for="email"
-                            class="flex flex-wrap text-sm text-gray-500 dark:text-gray-300">Hashing/Consensus
+                            class="flex flex-wrap text-sm text-gray-500">Hashing/Consensus
                             Algorithm(optional)</label>
 
                         <input type="email" placeholder="john@example.com"
-                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
+                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40" />
 
 
                     </div>
@@ -250,10 +250,10 @@
                 <div class="w-full">
                     <div>
                         <label for="email"
-                            class="flex flex-wrap text-sm text-gray-500 dark:text-gray-300">Team/Backers/Investors</label>
+                            class="flex flex-wrap text-sm text-gray-500">Team/Backers/Investors</label>
 
                         <input type="email" placeholder="john@example.com"
-                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
+                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40" />
 
                         <p class="mt-3 flex flex-wrap text-xs text-gray-400">Provide a list of key employees,
                             investors, and advisors. Describe their core competencies and past experience/achievements, and
@@ -263,11 +263,11 @@
                 </div>
                 <div class="w-full">
                     <div>
-                        <label for="email" class="flex flex-wrap text-sm text-gray-500 dark:text-gray-300">Media
+                        <label for="email" class="flex flex-wrap text-sm text-gray-500">Media
                             Coverage/Awards(optional)</label>
 
                         <input type="email" placeholder="john@example.com"
-                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
+                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40" />
 
                         <p class="mt-3 flex flex-wrap text-xs text-gray-400">Provide valid URL(s) to
                             articles/references.</p>
@@ -276,10 +276,10 @@
                 <div class="w-full">
                     <div>
                         <label for="email"
-                            class="flex flex-wrap text-sm text-gray-500 dark:text-gray-300">Traction/Adoption/Partnerships/MVPs/Apps</label>
+                            class="flex flex-wrap text-sm text-gray-500">Traction/Adoption/Partnerships/MVPs/Apps</label>
 
                         <input type="email" placeholder="john@example.com"
-                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
+                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40" />
 
                         <p class="mt-3 flex flex-wrap text-xs text-gray-400">This can take the form of user
                             growth,
@@ -290,12 +290,12 @@
                 </div>
                 <div class="w-full">
                     <div>
-                        <label for="email" class="flex flex-wrap text-sm text-gray-500 dark:text-gray-300">Country of
+                        <label for="email" class="flex flex-wrap text-sm text-gray-500">Country of
                             Origin
                             (where majority of team is located)</label>
 
                         <input type="email" placeholder="john@example.com"
-                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
+                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40" />
 
                         <p class="mt-3 flex flex-wrap text-xs text-gray-400">Please indicate the country where the
                             majority of your team is located. If applicable, please provide a list of countries and indicate
@@ -304,11 +304,11 @@
                 </div>
                 <div class="w-full">
                     <div>
-                        <label for="email" class="flex flex-wrap text-sm text-gray-500 dark:text-gray-300">Link to
+                        <label for="email" class="flex flex-wrap text-sm text-gray-500">Link to
                             Logo</label>
 
                         <input type="email" placeholder="john@example.com"
-                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
+                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40" />
 
                         <p class="mt-3 flex flex-wrap text-xs text-gray-400">3 conditions MUST be met: (1)
                             Transparent
@@ -320,11 +320,11 @@
                 </div>
                 <div class="w-full">
                     <div>
-                        <label for="email" class="flex flex-wrap text-sm text-gray-500 dark:text-gray-300">Website
+                        <label for="email" class="flex flex-wrap text-sm text-gray-500">Website
                             1</label>
 
                         <input type="email" placeholder="john@example.com"
-                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
+                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40" />
 
                         <p class="mt-3 flex flex-wrap text-xs text-gray-400">There is data validation for this
                             field.
@@ -335,11 +335,11 @@
                 </div>
                 <div class="w-full">
                     <div>
-                        <label for="email" class="flex flex-wrap text-sm text-gray-500 dark:text-gray-300">Website 2
+                        <label for="email" class="flex flex-wrap text-sm text-gray-500">Website 2
                             (Optional)(optional)</label>
 
                         <input type="email" placeholder="john@example.com"
-                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
+                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40" />
 
                         <p class="mt-3 flex flex-wrap text-xs text-gray-400">There is data validation for this
                             field.
@@ -352,12 +352,12 @@
                 </div>
                 <div class="w-full">
                     <div>
-                        <label for="email" class="flex flex-wrap text-sm text-gray-500 dark:text-gray-300">Annex A -
+                        <label for="email" class="flex flex-wrap text-sm text-gray-500">Annex A -
                             Rich List &
                             Reserve Addresses (Mandatory for Circulating Supply/Ranking)(optional)</label>
 
                         <input type="email" placeholder="john@example.com"
-                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
+                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40" />
 
                         <p class="mt-3 flex flex-wrap text-xs text-gray-400">Paste the URL of your completed Annex
                             A
@@ -368,11 +368,11 @@
                 <div class="w-full">
                     <div>
                         <label for="email"
-                            class="flex flex-wrap text-sm text-gray-500 dark:text-gray-300">Emission/release
+                            class="flex flex-wrap text-sm text-gray-500">Emission/release
                             schedule(optional)</label>
 
                         <input type="email" placeholder="john@example.com"
-                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
+                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40" />
 
                         <p class="mt-3 flex flex-wrap text-xs text-gray-400">Shows the emission/release schedule
                             of the
@@ -382,12 +382,12 @@
                 </div>
                 <div class="w-full">
                     <div>
-                        <label for="email" class="flex flex-wrap text-sm text-gray-500 dark:text-gray-300">Platform of
+                        <label for="email" class="flex flex-wrap text-sm text-gray-500">Platform of
                             Contract
                             Address 1</label>
 
                         <input type="email" placeholder="john@example.com"
-                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
+                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40" />
 
                         <p class="mt-3 flex flex-wrap text-xs text-gray-400">Select '-' if the platform is not in
                             the
@@ -396,12 +396,12 @@
                 </div>
                 <div class="w-full">
                     <div>
-                        <label for="email" class="flex flex-wrap text-sm text-gray-500 dark:text-gray-300">Contract
+                        <label for="email" class="flex flex-wrap text-sm text-gray-500">Contract
                             Address
                             1</label>
 
                         <input type="email" placeholder="john@example.com"
-                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
+                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40" />
 
                         <p class="mt-3 flex flex-wrap text-xs text-gray-400">For MOVE contracts (e.g. APTOS, SUI),
                             pls
@@ -412,12 +412,12 @@
                 </div>
                 <div class="w-full">
                     <div>
-                        <label for="email" class="flex flex-wrap text-sm text-gray-500 dark:text-gray-300">Number of
+                        <label for="email" class="flex flex-wrap text-sm text-gray-500">Number of
                             Decimals
                             (Contract Address 1)(optional)</label>
 
                         <input type="email" placeholder="john@example.com"
-                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
+                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40" />
 
                         <p class="mt-3 flex flex-wrap text-xs text-gray-400">This is usually found on the explorer
                             page
@@ -426,12 +426,12 @@
                 </div>
                 <div class="w-full">
                     <div>
-                        <label for="email" class="flex flex-wrap text-sm text-gray-500 dark:text-gray-300">Block
+                        <label for="email" class="flex flex-wrap text-sm text-gray-500">Block
                             Explorer
                             1(optional)</label>
 
                         <input type="email" placeholder="john@example.com"
-                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
+                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40" />
 
                         <p class="mt-3 flex flex-wrap text-xs text-gray-400">Insert a valid URL with the CONTRACT
                             ADDRESS, e.g. https://etherscan.io/token/0x2260fac5e5542a773aa44fbcfedf7c193bc2c599. This is a
@@ -440,12 +440,12 @@
                 </div>
                 <div class="w-full">
                     <div>
-                        <label for="email" class="flex flex-wrap text-sm text-gray-500 dark:text-gray-300">Block
+                        <label for="email" class="flex flex-wrap text-sm text-gray-500">Block
                             Explorer(s) 2,
                             3, 4, 5 (e.g. Etherscan, Ethplorer)(optional)</label>
 
                         <input type="email" placeholder="john@example.com"
-                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
+                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40" />
 
                         <p class="mt-3 flex flex-wrap text-xs text-gray-400">Insert a valid URL with the CONTRACT
                             ADDRESS, e.g. https://etherscan.io/token/0x2260fac5e5542a773aa44fbcfedf7c193bc2c599. If there is
@@ -454,59 +454,59 @@
                 </div>
                 <div class="w-full">
                     <div>
-                        <label for="email" class="flex flex-wrap text-sm text-gray-500 dark:text-gray-300">Source Code
+                        <label for="email" class="flex flex-wrap text-sm text-gray-500">Source Code
                             (e.g.
                             Github, Gitter)(optional)</label>
 
                         <input type="email" placeholder="john@example.com"
-                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
+                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40" />
 
                         <p class="mt-3 flex flex-wrap text-xs text-gray-400">Insert a valid URL.</p>
                     </div>
                 </div>
                 <div class="w-full">
                     <div>
-                        <label for="email" class="flex flex-wrap text-sm text-gray-500 dark:text-gray-300">Whitepaper /
+                        <label for="email" class="flex flex-wrap text-sm text-gray-500">Whitepaper /
                             Technical Documentation(optional)</label>
 
                         <input type="email" placeholder="john@example.com"
-                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
+                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40" />
 
                         <p class="mt-3 flex flex-wrap text-xs text-gray-400">Insert a valid URL.</p>
                     </div>
                 </div>
                 <div class="w-full">
                     <div>
-                        <label for="email" class="flex flex-wrap text-sm text-gray-500 dark:text-gray-300">Announcement
+                        <label for="email" class="flex flex-wrap text-sm text-gray-500">Announcement
                             (e.g.
                             Bitcointalk)(optional)</label>
 
                         <input type="email" placeholder="john@example.com"
-                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
+                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40" />
 
                         <p class="mt-3 flex flex-wrap text-xs text-gray-400">Insert a valid URL.</p>
                     </div>
                 </div>
                 <div class="w-full">
                     <div>
-                        <label for="email" class="flex flex-wrap text-sm text-gray-500 dark:text-gray-300">Message
+                        <label for="email" class="flex flex-wrap text-sm text-gray-500">Message
                             Board 1 (e.g.
                             Blog/Medium)(optional)</label>
 
                         <input type="email" placeholder="john@example.com"
-                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
+                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40" />
 
                         <p class="mt-3 flex flex-wrap text-xs text-gray-400">Insert a valid URL.</p>
                     </div>
                 </div>
                 <div class="w-full">
                     <div>
-                        <label for="email" class="flex flex-wrap text-sm text-gray-500 dark:text-gray-300">Message
+                        <label for="email" class="flex flex-wrap text-sm text-gray-500">Message
                             Board(s) 2,
                             3, 4, 5 (e.g. Blog/Medium)(optional)</label>
 
                         <input type="email" placeholder="john@example.com"
-                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
+                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40" />
 
                         <p class="mt-3 flex flex-wrap text-xs text-gray-400">Insert valid URL(s). If there is more
                             than
@@ -516,10 +516,10 @@
                 <div class="w-full">
                     <div>
                         <label for="email"
-                            class="flex flex-wrap text-sm text-gray-500 dark:text-gray-300">Twitter</label>
+                            class="flex flex-wrap text-sm text-gray-500">Twitter</label>
 
                         <input type="email" placeholder="john@example.com"
-                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
+                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40" />
 
                         <p class="mt-3 flex flex-wrap text-xs text-gray-400">There is data validation for this
                             field.
@@ -528,11 +528,11 @@
                 </div>
                 <div class="w-full">
                     <div>
-                        <label for="email" class="flex flex-wrap text-sm text-gray-500 dark:text-gray-300">Reddit
+                        <label for="email" class="flex flex-wrap text-sm text-gray-500">Reddit
                             (optional)</label>
 
                         <input type="email" placeholder="john@example.com"
-                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
+                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40" />
 
                         <p class="mt-3 flex flex-wrap text-xs text-gray-400">Insert a valid URL for a subreddit.
                         </p>
@@ -541,34 +541,34 @@
                 <div class="w-full">
                     <div>
                         <label for="email"
-                            class="flex flex-wrap text-sm text-gray-500 dark:text-gray-300">Facebook(optional)</label>
+                            class="flex flex-wrap text-sm text-gray-500">Facebook(optional)</label>
 
                         <input type="email" placeholder="john@example.com"
-                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
+                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40" />
 
                         <p class="mt-3 flex flex-wrap text-xs text-gray-400">Insert a valid URL.</p>
                     </div>
                 </div>
                 <div class="w-full">
                     <div>
-                        <label for="email" class="flex flex-wrap text-sm text-gray-500 dark:text-gray-300">Video
+                        <label for="email" class="flex flex-wrap text-sm text-gray-500">Video
                             Channel (e.g.
                             YouTube)(optional)</label>
 
                         <input type="email" placeholder="john@example.com"
-                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
+                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40" />
 
                         <p class="mt-3 flex flex-wrap text-xs text-gray-400">Insert a valid URL.</p>
                     </div>
                 </div>
                 <div class="w-full">
                     <div>
-                        <label for="email" class="flex flex-wrap text-sm text-gray-500 dark:text-gray-300">Chat 1 (e.g.
+                        <label for="email" class="flex flex-wrap text-sm text-gray-500">Chat 1 (e.g.
                             Discord,
                             Telegram, Slack, Weibo).</label>
 
                         <input type="email" placeholder="john@example.com"
-                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
+                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40" />
 
                         <p class="mt-3 flex flex-wrap text-xs text-gray-400">There is data validation for this
                             field.
@@ -577,12 +577,12 @@
                 </div>
                 <div class="w-full">
                     <div>
-                        <label for="email" class="flex flex-wrap text-sm text-gray-500 dark:text-gray-300">Chat(s) 2,
+                        <label for="email" class="flex flex-wrap text-sm text-gray-500">Chat(s) 2,
                             3, 4, 5
                             (e.g. Discord, Telegram, Slack, Weibo).(optional)</label>
 
                         <input type="email" placeholder="john@example.com"
-                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
+                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40" />
 
                         <p class="mt-3 flex flex-wrap text-xs text-gray-400">Insert valid URL(s). If there is more
                             than
@@ -592,34 +592,34 @@
                 <div class="w-full">
                     <div>
                         <label for="email"
-                            class="flex flex-wrap text-sm text-gray-500 dark:text-gray-300">LinkedIn(optional)</label>
+                            class="flex flex-wrap text-sm text-gray-500">LinkedIn(optional)</label>
 
                         <input type="email" placeholder="john@example.com"
-                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
+                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40" />
 
                         <p class="mt-3 flex flex-wrap text-xs text-gray-400">Insert a valid URL.</p>
                     </div>
                 </div>
                 <div class="w-full">
                     <div>
-                        <label for="email" class="flex flex-wrap text-sm text-gray-500 dark:text-gray-300">Mobile App 1
+                        <label for="email" class="flex flex-wrap text-sm text-gray-500">Mobile App 1
                             (e.g.
                             Google Play store, iTunes store)(optional)</label>
 
                         <input type="email" placeholder="john@example.com"
-                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
+                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40" />
 
                         <p class="mt-3 flex flex-wrap text-xs text-gray-400">Insert a valid URL.</p>
                     </div>
                 </div>
                 <div class="w-full">
                     <div>
-                        <label for="email" class="flex flex-wrap text-sm text-gray-500 dark:text-gray-300">Mobile
+                        <label for="email" class="flex flex-wrap text-sm text-gray-500">Mobile
                             App(s) 2, 3,
                             4, 5 (e.g. Google Play store, iTunes store)(optional)</label>
 
                         <input type="email" placeholder="john@example.com"
-                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
+                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40" />
 
                         <p class="mt-3 flex flex-wrap text-xs text-gray-400">Insert valid URL(s). If there is more
                             than
@@ -628,12 +628,12 @@
                 </div>
                 <div class="w-full">
                     <div>
-                        <label for="email" class="flex flex-wrap text-sm text-gray-500 dark:text-gray-300">"Circulating
+                        <label for="email" class="flex flex-wrap text-sm text-gray-500">"Circulating
                             Supply
                             (# of coins that are circulating in the market and in the general public's hands.)"</label>
 
                         <input type="email" placeholder="john@example.com"
-                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
+                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40" />
 
                         <p class="mt-3 flex flex-wrap text-xs text-gray-400">Insert EXACT number of units (e.g.
                             21000000).</p>
@@ -641,13 +641,13 @@
                 </div>
                 <div class="w-full">
                     <div>
-                        <label for="email" class="flex flex-wrap text-sm text-gray-500 dark:text-gray-300">"Total
+                        <label for="email" class="flex flex-wrap text-sm text-gray-500">"Total
                             Supply (# of
                             coins in existence right now minus any coins that have been verifiably
                             burned.)(optional)"</label>
 
                         <input type="email" placeholder="john@example.com"
-                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
+                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40" />
 
                         <p class="mt-3 flex flex-wrap text-xs text-gray-400">Insert EXACT number of units (e.g.
                             21000000).</p>
@@ -655,12 +655,12 @@
                 </div>
                 <div class="w-full">
                     <div>
-                        <label for="email" class="flex flex-wrap text-sm text-gray-500 dark:text-gray-300">"Max Supply
+                        <label for="email" class="flex flex-wrap text-sm text-gray-500">"Max Supply
                             (maximum
                             # of coins that will ever exist in the lifetime of the asset)"</label>
 
                         <input type="email" placeholder="john@example.com"
-                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
+                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40" />
 
                         <p class="mt-3 flex flex-wrap text-xs text-gray-400">Insert EXACT number of units (e.g.
                             21000000). If the max supply is infinite, type '0'</p>
@@ -668,23 +668,23 @@
                 </div>
                 <div class="w-full">
                     <div>
-                        <label for="email" class="flex flex-wrap text-sm text-gray-500 dark:text-gray-300">ICO/IEO
+                        <label for="email" class="flex flex-wrap text-sm text-gray-500">ICO/IEO
                             Start
                             Date(optional)</label>
 
                         <input type="email" placeholder="john@example.com"
-                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
+                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40" />
 
 
                     </div>
                 </div>
                 <div class="w-full">
                     <div>
-                        <label for="email" class="flex flex-wrap text-sm text-gray-500 dark:text-gray-300">ICO/IEO End
+                        <label for="email" class="flex flex-wrap text-sm text-gray-500">ICO/IEO End
                             Date(optional)</label>
 
                         <input type="email" placeholder="john@example.com"
-                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
+                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40" />
 
 
                     </div>
@@ -692,23 +692,23 @@
                 <div class="w-full">
                     <div>
                         <label for="email"
-                            class="flex flex-wrap text-sm text-gray-500 dark:text-gray-300">ICO/IEO/Launch
+                            class="flex flex-wrap text-sm text-gray-500">ICO/IEO/Launch
                             Price(optional)</label>
 
                         <input type="email" placeholder="john@example.com"
-                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
+                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40" />
 
                         <p class="mt-3 flex flex-wrap text-xs text-gray-400">Insert USD Price</p>
                     </div>
                 </div>
                 <div class="w-full">
                     <div>
-                        <label for="email" class="flex flex-wrap text-sm text-gray-500 dark:text-gray-300">API endpoint
+                        <label for="email" class="flex flex-wrap text-sm text-gray-500">API endpoint
                             that
                             displays ONLY TOTAL SUPPLY as a NUMERICAL value (Type 'NA' if not applicable)(optional)</label>
 
                         <input type="email" placeholder="john@example.com"
-                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
+                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40" />
 
                         <p class="mt-3 flex flex-wrap text-xs text-gray-400">MUST be in this EXACT format -
                             http://chainz.cryptoid.info/grs/api.dws?q=totalcoins. Total Supply refers to the # of coins in
@@ -717,12 +717,12 @@
                 </div>
                 <div class="w-full">
                     <div>
-                        <label for="email" class="flex flex-wrap text-sm text-gray-500 dark:text-gray-300">API endpoint
+                        <label for="email" class="flex flex-wrap text-sm text-gray-500">API endpoint
                             that
                             displays ONLY Circulating Supply as a numerical value(optional)</label>
 
                         <input type="email" placeholder="john@example.com"
-                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
+                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40" />
 
                         <p class="mt-3 flex flex-wrap text-xs text-gray-400">MUST be in this EXACT format -
                             http://chainz.cryptoid.info/grs/api.dws?q=circulating. Circulating Supply refers to the # of
@@ -731,12 +731,12 @@
                 </div>
                 <div class="w-full">
                     <div>
-                        <label for="email" class="flex flex-wrap text-sm text-gray-500 dark:text-gray-300">List of
+                        <label for="email" class="flex flex-wrap text-sm text-gray-500">List of
                             CMC-supported
                             exchanges(optional)</label>
 
                         <input type="email" placeholder="john@example.com"
-                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
+                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40" />
 
                         <p class="mt-3 flex flex-wrap text-xs text-gray-400">Enter NA if not applicable. Provide
                             (i)
@@ -746,12 +746,12 @@
                 </div>
                 <div class="w-full">
                     <div>
-                        <label for="email" class="flex flex-wrap text-sm text-gray-500 dark:text-gray-300">[Optional]
+                        <label for="email" class="flex flex-wrap text-sm text-gray-500">[Optional]
                             Are you
                             willing to provide (dofollow) linkbacks to CMC?</label>
 
                         <input type="email" placeholder="john@example.com"
-                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
+                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40" />
 
                         <p class="mt-3 flex flex-wrap text-xs text-gray-400">8 out of 10 applicants are willing to
                             do
@@ -761,13 +761,13 @@
                 </div>
                 <div class="w-full">
                     <div>
-                        <label for="email" class="flex flex-wrap text-sm text-gray-500 dark:text-gray-300">"[OPTIONAL]
+                        <label for="email" class="flex flex-wrap text-sm text-gray-500">"[OPTIONAL]
                             Are you
                             willing to integrate the CoinMarketCap Telegram bot (https://t.me/CoinMarketCapPriceBot) into
                             your official Telegram group/s?"</label>
 
                         <input type="email" placeholder="john@example.com"
-                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
+                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40" />
 
                         <p class="mt-3 flex flex-wrap text-xs text-gray-400">8 out of 10 applicants are willing to
                             do
@@ -776,23 +776,23 @@
                 </div>
                 <div class="w-full">
                     <div>
-                        <label for="email" class="flex flex-wrap text-sm text-gray-500 dark:text-gray-300">[OPTIONAL]
+                        <label for="email" class="flex flex-wrap text-sm text-gray-500">[OPTIONAL]
                             Are you
                             willing to prioritize the sharing of CMC DEXSCAN links in your socials? See </label>
 
                         <input type="email" placeholder="john@example.com"
-                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
+                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40" />
 
                         <p class="mt-3 flex flex-wrap text-xs text-gray-400">CMC has a Telegram Bot </p>
                     </div>
                 </div>
                 <div class="w-full">
                     <div>
-                        <label for="email" class="flex flex-wrap text-sm text-gray-500 dark:text-gray-300">ICO Page
+                        <label for="email" class="flex flex-wrap text-sm text-gray-500">ICO Page
                             Application(optional)</label>
 
                         <input type="email" placeholder="john@example.com"
-                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
+                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40" />
 
                         <p class="mt-3 flex flex-wrap text-xs text-gray-400">If you are keen to be featured on our
                             ICO
@@ -801,11 +801,11 @@
                 </div>
                 <div class="w-full">
                     <div>
-                        <label for="email" class="flex flex-wrap text-sm text-gray-500 dark:text-gray-300">SRD
+                        <label for="email" class="flex flex-wrap text-sm text-gray-500">SRD
                             Application</label>
 
                         <input type="email" placeholder="john@example.com"
-                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
+                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40" />
 
                         <p class="mt-3 flex flex-wrap text-xs text-gray-400">Are you an official representative of
                             the
@@ -816,12 +816,12 @@
                 </div>
                 <div class="w-full">
                     <div>
-                        <label for="email" class="flex flex-wrap text-sm text-gray-500 dark:text-gray-300">Public
+                        <label for="email" class="flex flex-wrap text-sm text-gray-500">Public
                             verification
                             post</label>
 
                         <input type="email" placeholder="john@example.com"
-                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
+                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40" />
 
                         <p class="mt-3 flex flex-wrap text-xs text-gray-400">Please follow up your initial
                             application
@@ -838,11 +838,11 @@
                 <div class="w-full">
                     <div>
                         <label for="email"
-                            class="flex flex-wrap text-sm text-gray-500 dark:text-gray-300">Proof/Supporting
+                            class="flex flex-wrap text-sm text-gray-500">Proof/Supporting
                             evidence/documents</label>
 
                         <input type="email" placeholder="john@example.com"
-                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
+                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40" />
 
                         <p class="mt-3 flex flex-wrap text-xs text-gray-400">Provide proof (e.g. imgur, gyazo)
                             that the
@@ -856,10 +856,10 @@
                 <div class="w-full">
                     <div>
                         <label for="email"
-                            class="flex flex-wrap text-sm text-gray-500 dark:text-gray-300">Attachments(optional)</label>
+                            class="flex flex-wrap text-sm text-gray-500">Attachments(optional)</label>
 
                         <input type="email" placeholder="john@example.com"
-                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
+                            class="mt-2 block w-full rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-gray-700 placeholder-gray-400/70 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40" />
 
                         <p class="mt-3 flex flex-wrap text-xs text-gray-400">The date the project launched (e.g.
                             token

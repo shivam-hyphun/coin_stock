@@ -373,7 +373,7 @@
                                 <table class="w-full whitespace-nowrap">
                                     <thead>
                                         <tr tabindex="0"
-                                            class="h-16 w-full text-sm leading-none text-gray-800 focus:outline-none dark:text-white">
+                                            class="h-16 w-full text-sm leading-none text-gray-800 focus:outline-none">
                                             <th class="pl-4 text-right font-normal">#</th>
                                             <th class="pl-4 text-left font-normal">Name</th>
                                             <th class="px-2 text-left font-normal">Price</th>
@@ -437,12 +437,12 @@
                                             </td>
                                             <td class="px-2">
                                                 <p class="text-sm font-medium">$42,778.91</p>
-                                                <p class="mt-2 text-xs leading-3 text-gray-600 dark:text-gray-200">5 tasks
+                                                <p class="mt-2 text-xs leading-3 text-gray-600">5 tasks
                                                     pending</p>
                                             </td>
                                             <td class="px-2">
                                                 <p class="text-sm font-medium">$42,778.91</p>
-                                                <div class="mt-2 h-1.5 w-24 rounded-full bg-gray-100 dark:bg-gray-700">
+                                                <div class="mt-2 h-1.5 w-24 rounded-full bg-gray-100">
                                                     <div class="bg-green-progress h-1.5 w-20 rounded-full"></div>
                                                 </div>
                                             </td>
@@ -499,12 +499,12 @@
                                             </td>
                                             <td class="px-2">
                                                 <p class="text-sm font-medium">$42,778.91</p>
-                                                <p class="mt-2 text-xs leading-3 text-gray-600 dark:text-gray-200">5 tasks
+                                                <p class="mt-2 text-xs leading-3 text-gray-600">5 tasks
                                                     pending</p>
                                             </td>
                                             <td class="px-2">
                                                 <p class="text-sm font-medium">$42,778.91</p>
-                                                <div class="mt-2 h-1.5 w-24 rounded-full bg-gray-100 dark:bg-gray-700">
+                                                <div class="mt-2 h-1.5 w-24 rounded-full bg-gray-100">
                                                     <div class="bg-green-progress h-1.5 w-20 rounded-full"></div>
                                                 </div>
                                             </td>
