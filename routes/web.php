@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,30 +21,31 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    //  Home Controller Routes
+    Route::get('/home', [HomeController::class, 'index'])->middleware('auth', 'verified')->name('home');
+    Route::get('/coin-details', [HomeController::class, 'coinDetails'])->name('coin-details');
+    Route::get('submit-request', [HomeController::class, 'submitRequest'])->name('submit-request');
+
+    // Admin routes
+    Route::get('/dashboard', [AdminController::class, 'index'])->middleware('auth', 'verified', 'admin')->name('admin_dashboard');
+    Route::get('/user_details', [AdminController::class, 'users'])->middleware('auth', 'verified', 'admin')->name('user_details');
+
+    Route::resource('users', UserController::class);
+
+
 });
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
-Route::get('/coin-details', [HomeController::class, 'coinDetails'])->name('coin-details');
-Route::get('submit-request', [HomeController::class, 'submitRequest'])->name('submit-request');
-
-// Admin routes
-Route::get('/admin_dashboard', [AdminController::class, 'index'])->name('admin_dashboard');
-Route::get('/admin_login', function () {
-    return view('backend.pages.login');
-});
 
 
 
 
 
-// ?  Home Controller Routes
 
-require __DIR__.'/auth.php';
+
+require __DIR__ . '/auth.php';

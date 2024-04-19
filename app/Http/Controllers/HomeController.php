@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
-
+use App\Models\User;
 class HomeController extends Controller
 {
     /**
@@ -12,7 +13,23 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('frontend.pages.home');
+        if (Auth::id()) {
+
+            $usertype = Auth()->user()->usertype;
+
+            if ($usertype == 'user') {
+                return view('frontend.pages.home');
+            }else if ($usertype == 'admin') {
+                $count_users = User::where('usertype', '!=', 'admin')->count();
+                // dd($count_users);
+                return view('backend.pages.index',compact('count_users'));
+            }else{
+                return redirect()->back();
+            }
+
+        }
+
+        return redirect()->back();
     }
 
     /**

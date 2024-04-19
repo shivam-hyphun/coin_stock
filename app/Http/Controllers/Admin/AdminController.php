@@ -11,5 +11,9 @@ class AdminController extends Controller
     {
         return view('backend.pages.index');
     }
+    // public function users()
+    // {
+    //     return view('backend.pages.user_details');
+    // }
 
 }
