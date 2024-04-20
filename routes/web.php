@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Admin\CoinsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +23,8 @@ Route::get('/', function () {
 });
 
 
+
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
@@ -37,6 +40,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/user_details', [AdminController::class, 'users'])->middleware('auth', 'verified', 'admin')->name('user_details');
 
     Route::resource('users', UserController::class);
+    // CoinsController
+    Route::resource('coins', CoinsController::class);
+
 
 
 });
