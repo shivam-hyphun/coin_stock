@@ -6,15 +6,35 @@ use App\Models\Coins;
 use App\Models\Links;
 use App\Models\Tags;
 use Illuminate\Http\Request;
+use Yajra\DataTables\Facades\DataTables;
 
 class CoinsController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('backend.pages.mange_coins.create_coins');
+
+        if ($request->ajax()) {
+
+            $data = Coins::latest()->get();
+
+            return Datatables::of($data)
+                ->addIndexColumn()
+                ->addColumn('action', function ($row) {
+
+                    $btn = '<a href="javascript:void(0)" data-toggle="tooltip"  data-id="' . $row->id . '" data-original-title="Edit" class="edit btn btn-primary btn-sm editProduct">Edit</a>';
+
+                    $btn = $btn . ' <a href="javascript:void(0)" data-toggle="tooltip"  data-id="' . $row->id . '" data-original-title="Delete" class="btn btn-danger btn-sm deleteProduct">Delete</a>';
+
+                    return $btn;
+                })
+                ->rawColumns(['action'])
+                ->make(true);
+        }
+
+        return view('backend.pages.mange_coins.manage_coins');
     }
 
     /**
@@ -22,7 +42,7 @@ class CoinsController extends Controller
      */
     public function create()
     {
-        //
+        return view('backend.pages.mange_coins.create_coins');
     }
 
     /**
@@ -103,7 +123,8 @@ class CoinsController extends Controller
      */
     public function show(Coins $coins)
     {
-        //
+
+
     }
 
     /**

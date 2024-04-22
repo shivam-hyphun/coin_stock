@@ -1,5 +1,5 @@
 @extends('backend.layout.master')
-@section('title', 'Mange Coins')
+@section('title', 'Manage Coins')
 @section('main_content')
 
     <div class="content-wrapper">
@@ -40,7 +40,7 @@
                         <div class="row">
                             <div class="col-md-12">
 
-                                <form id="coinForm">
+                                <form id="coinForm" enctype="multipart/form-data">
                                     @csrf
                                     <div class="row">
                                         <div class="col-md-6">
@@ -59,6 +59,7 @@
                                                 <input type="text" class="form-control" id="price" name="price"
                                                     placeholder="Enter price" value="{{ old('price') }}">
                                             </div>
+                                            <!-- Add other form fields -->
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
@@ -78,6 +79,7 @@
                                                     name="circulatingsupply" placeholder="Enter circulating supply"
                                                     value="{{ old('circulatingsupply') }}">
                                             </div>
+                                            <!-- Add other form fields -->
                                         </div>
                                     </div>
                                     <div class="row">
@@ -139,7 +141,7 @@
                                                 <label for="tags">Tags</label>
                                                 <textarea class="form-control" id="tags" name="tags" placeholder="Enter tags">{{ old('tags') }}</textarea>
                                             </div>
-                                            <div id="tags-container">
+                                            <div id="tags-container" class="my-2">
                                                 @if (old('tags'))
                                                     @foreach (explode(',', old('tags')) as $tag)
                                                         <span class="badge badge-primary mr-1">{{ $tag }}
@@ -154,12 +156,17 @@
                                     </div>
                                     <button type="submit" class="btn btn-primary">Submit</button>
                                 </form>
+
+                                <div id="successMessage" style="display: none;" class="alert alert-success"
+                                    role="alert">
+                                    Submitted successfully
+                                </div>
                             </div>
                         </div>
                     </div>
         </section>
     </div>
-@endsection
+
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
@@ -207,44 +214,70 @@
             }
         });
 
-
+        // Form submission
         $('#coinForm').on('submit', function(e) {
             e.preventDefault();
             var formData = new FormData(this);
 
             // Extract tags from tags container
             var tags = [];
-            $('#tags-container .badge').each(function() {
-                var tagText = $(this).text().trim(); // Get text content of the tag
-                // Remove any non-alphanumeric characters from the tag text
-                tagText = tagText.replace(/[^a-zA-Z0-9\s]/g, '');
-                if (tagText !== '') {
-                    tags.push(tagText);
-                }
+            $('#tags-container span').each(function() {
+                var tagText = $(this).text().trim().split(' ')[0]; // Get text content of the tag
+                tags.push(tagText);
             });
             formData.append('tags', tags.join(','));
-            $.ajaxSetup({
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                }
-            });
-
 
             $.ajax({
                 type: 'POST',
-                url: '{{ route('coins.store') }}',
+                url: '{{ route('coin.store') }}', // Replace this with your route
                 data: formData,
                 processData: false,
                 contentType: false,
                 success: function(response) {
                     // Handle success response
                     console.log(response);
+                    // Reset form
+                    $('#coinForm')[0].reset();
+                    // Clear error messages
+                    $('#coinForm').find('.is-invalid').removeClass('is-invalid');
+                    $('#coinForm').find('.invalid-feedback').remove();
+                    // Clear tags container
+                    $('#tags-container').empty();
+                    // Clear image preview
+                    $('#image-preview').empty();
+                    // Show success message
+                    $('#successMessage').text('Submitted successfully').fadeIn().delay(3000)
+                        .fadeOut();
                 },
                 error: function(xhr, status, error) {
                     // Handle error response
-                    console.log(xhr.responseText);
+                    if (xhr.status === 422) {
+                        var errors = xhr.responseJSON.errors;
+                        // Clear existing error messages
+                        $('#coinForm').find('.is-invalid').removeClass('is-invalid');
+                        $('#coinForm').find('.invalid-feedback').remove();
+                        // Display validation errors
+                        $.each(errors, function(field, messages) {
+                            var inputField = $('#' + field);
+                            inputField.addClass('is-invalid');
+                            $.each(messages, function(index, message) {
+                                inputField.after(
+                                    '<div class="invalid-feedback">' +
+                                    message + '</div>');
+                            });
+                        });
+                    } else {
+                        console.log(xhr.responseText);
+                        // Show generic error message if status is not 422
+                        alert(
+                            'An error occurred while submitting the form. Please try again.');
+                    }
                 }
             });
+
+
         });
+
     });
 </script>
+@endsection
