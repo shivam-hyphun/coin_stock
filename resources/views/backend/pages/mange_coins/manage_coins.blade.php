@@ -35,6 +35,8 @@
                             <th>FDMC</th>
                             <th>UCID</th>
                             <th>Image</th>
+                            <th>TAGS</th>
+                            <th>LINKS</th>
                             <th width="280px">Action</th>
                         </tr>
                     </thead>
@@ -96,7 +98,6 @@
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             }
         });
-
         var table = $('.data-table').DataTable({
     processing: true,
     serverSide: true,
@@ -153,14 +154,44 @@
             title: 'Image'
         },
         {
+            data: 'tags',
+            name: 'tags',
+            title: 'Tags',
+            render: function(data) {
+                var badges = '';
+                data.forEach(function(tag) {
+                    badges += '<span class="badge badge-primary my-1">' + tag.name + '</span> ';
+                });
+                return badges;
+            }
+        },
+        {
+            data: 'links',
+            name: 'links',
+            title: 'Links',
+            render: function(data) {
+                var badges = '';
+                data.forEach(function(link) {
+                    badges += '<span class="badge badge-success my-1"><a href="' + link.url + '" target="_blank">' + link.name + '</a></span> ';
+                });
+                return badges;
+            }
+        },
+        {
             data: 'action',
             name: 'action',
             orderable: false,
             searchable: false,
             title: 'Action'
         }
+    ],
+    scrollX: true, // Enable horizontal scrolling
+    autoWidth: false, // Disable automatic column width calculation
+    columnDefs: [
+        { targets: '_all', width: 'auto' } // Set all columns to automatically adjust width
     ]
 });
+
 
         $('#createNewProduct').click(function() {
             $('#saveBtn').val("create-product");

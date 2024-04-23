@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
+
 use App\Http\Controllers\Controller;
 use App\Models\Coins;
 use App\Models\Links;
@@ -15,19 +16,16 @@ class CoinsController extends Controller
      */
     public function index(Request $request)
     {
-
         if ($request->ajax()) {
-
-            $data = Coins::latest()->get();
+            // Eager loading to fetch related tags and links along with coins
+            $data = Coins::with('tags', 'links')->latest()->get();
 
             return Datatables::of($data)
+
                 ->addIndexColumn()
                 ->addColumn('action', function ($row) {
-
                     $btn = '<a href="javascript:void(0)" data-toggle="tooltip"  data-id="' . $row->id . '" data-original-title="Edit" class="edit btn btn-primary btn-sm editProduct">Edit</a>';
-
-                    $btn = $btn . ' <a href="javascript:void(0)" data-toggle="tooltip"  data-id="' . $row->id . '" data-original-title="Delete" class="btn btn-danger btn-sm deleteProduct">Delete</a>';
-
+                    $btn .= ' <a href="javascript:void(0)" data-toggle="tooltip"  data-id="' . $row->id . '" data-original-title="Delete" class="btn btn-danger btn-sm deleteProduct">Delete</a>';
                     return $btn;
                 })
                 ->rawColumns(['action'])
@@ -81,8 +79,8 @@ class CoinsController extends Controller
 
         // Upload image
         if ($request->hasFile('image')) {
-           $imageName = time().'-'.$request->image->extension();
-            $request->image->move(public_path('coins'),$imageName);
+            $imageName = time() . '.' . $request->image->extension();
+            $request->image->move(public_path('coins'), $imageName);
             $coin->image = $imageName;
         }
 
@@ -123,8 +121,6 @@ class CoinsController extends Controller
      */
     public function show(Coins $coins)
     {
-
-
     }
 
     /**

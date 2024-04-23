@@ -107,13 +107,19 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-md-12">
+                                        <div class="col-md-6">
                                             <div class="form-group">
                                                 <label for="image">Image</label>
                                                 <input type="file" class="form-control-file" id="image"
                                                     name="image" accept="image/*">
                                             </div>
-                                            <div id="image-preview" class="mt-2"></div>
+
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <div id="image-preview" class="mt-2" style="width:100px"></div>
+                                            </div>
+
                                         </div>
                                     </div>
                                     <div class="row">
@@ -157,7 +163,7 @@
                                     <button type="submit" class="btn btn-primary">Submit</button>
                                 </form>
 
-                                <div id="successMessage" style="display: none;" class="alert alert-success"
+                                <div id="successMessage" style="display: none;" class="alert alert-success my-2"
                                     role="alert">
                                     Submitted successfully
                                 </div>

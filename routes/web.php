@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\CoinsController;
+use App\Livewire\Managecoin\ManageCoins;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,6 +47,7 @@ Route::middleware('auth')->group(function () {
 
 
 });
+Route::get('/manage_coins', ManageCoins::class);
 
 
 
