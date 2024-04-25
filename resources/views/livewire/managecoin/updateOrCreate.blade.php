@@ -1,15 +1,24 @@
-<div class="row justify-content-center mt-3 mb-3">
-    <div class="col-md-12">
+<!-- SELECT2 EXAMPLE -->
+<div class="card card-default">
+    <div class="card-header">
+        <h3 class="card-title">{{ $title }}</h3>
 
-        <div class="card">
-            <div class="card-header">
-                <div class="float-start">
-                    {{ $title }}
-                </div>
-            </div>
-            <div class="card-body">
+        <div class="card-tools">
+            <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                <i class="fas fa-minus"></i>
+            </button>
+            <button type="button" class="btn btn-tool" data-card-widget="remove">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-12">
+
                 <form wire:submit="save" enctype="multipart/form-data">
-
+                    @csrf
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
@@ -74,7 +83,8 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label for="coin_max_supply">Max Supply</label>
-                                <input type="text" class="form-control @error('coin_max_supply') is-invalid @enderror"
+                                <input type="text"
+                                    class="form-control @error('coin_max_supply') is-invalid @enderror"
                                     id="coin_max_supply" name="coin_max_supply" wire:model="coin_max_supply">
                                 @if ($errors->has('coin_max_supply'))
                                     <span class="text-danger">{{ $errors->first('coin_max_supply') }}</span>
@@ -89,7 +99,8 @@
                                     id="coin_fully_diluted_market_cap" name="coin_fully_diluted_market_cap"
                                     wire:model="coin_fully_diluted_market_cap">
                                 @if ($errors->has('coin_fully_diluted_market_cap'))
-                                    <span class="text-danger">{{ $errors->first('coin_fully_diluted_market_cap') }}</span>
+                                    <span
+                                        class="text-danger">{{ $errors->first('coin_fully_diluted_market_cap') }}</span>
                                 @endif
                             </div>
                         </div>
@@ -105,26 +116,24 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="coin_image">Image</label>
-                                <input type="file"
-                                    class="form-control-file @error('coin_image') is-invalid @enderror" id="coin_image"
-                                    name="coin_image" accept="image/*" wire:model="coin_image">
-                                @if ($errors->has('coin_image'))
-                                    <span class="text-danger">{{ $errors->first('coin_image') }}</span>
-                                @endif
-                            </div>
+                        <div class="form-group">
+                            <label for="coin_image">Image</label>
+                            <input type="file" class="form-control-file @error('coin_image') is-invalid @enderror"
+                                id="coin_image" name="coin_image" accept="image/*" wire:model="coin_image">
+                            @if ($errors->has('coin_image'))
+                                <span class="text-danger">{{ $errors->first('coin_image') }}</span>
+                            @endif
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <div id="coin_image-preview" class="mt-2" style="width:100px"></div>
+                                <div id="image-preview" class="mt-2" style="width:100px"></div>
                             </div>
+
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <div id="coin_links">
+                            <div id="links">
                                 <div class="form-group">
                                     <label for="coin_links">Links</label>
                                     <div class="input-group">
@@ -153,45 +162,47 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="form-group">
-                                <label for="coin_tags">Tags</label>
-                                <textarea class="form-control @error('coin_tags') is-invalid @enderror" id="coin_tags" name="coin_tags"
-                                    placeholder="Enter tags">{{ old('coin_tags') }}</textarea>
-                                @if ($errors->has('coin_tags'))
-                                    <span class="text-danger">{{ $errors->first('coin_tags') }}</span>
-                                @endif
+                                <label for="newTag">Add Tags</label>
+                                <textarea type="text" wire:model="newTag" wire:keydown.enter.prevent="createTag" class="form-control" rows="2"> </textarea>
+                                @if ($errors->has('newTag'))
+                                <span class="text-danger">{{ $errors->first('newTag') }}</span>
+                            @endif
                             </div>
-                            <div id="coin_tags-container" class="my-2">
-                                @if (old('coin_tags'))
-                                    @foreach (explode(',', old('coin_tags')) as $tag)
-                                        <span class="badge badge-primary mr-1">{{ $tag }}<button
-                                                type="button" class="close" aria-label="Close"><span
-                                                    aria-hidden="true">&times;</span></button></span>
-                                    @endforeach
-                                @endif
+
+                            <div>
+                                @foreach($tags as $tag)
+                                <span class="badge badge-primary">{{ $tag }} <button wire:click="removeTag('{{ $tag }}')"><i class="fas fa-times"></i></button></span>
+                                @endforeach
                             </div>
                         </div>
                     </div>
 
                     <div class="mb-3 row">
-                        <button type="submit" class="col-md-3 offset-md-5 btn btn-success">
+                        <button type="submit" class="col-md-1 text-center  mx-2 btn btn-success ">
                             Save
                         </button>
-                    </div>
 
-                    @if ($isEdit)
-                        <div class="mb-3 row">
-                            <button wire:click="cancel" class="col-md-3 offset-md-5 btn btn-danger">
+                        @if ($isEdit)
+                            <button wire:click="cancel" class="col-md-1 text-center btn btn-danger">
                                 Cancel
                             </button>
-                        </div>
-                    @endif
+                        @endif
+                    </div>
+
+
 
                     <div class="mb-3 row">
                         <span wire:loading class="col-md-3 offset-md-5 text-primary">Processing...</span>
                     </div>
 
+
                 </form>
+
+                <div id="successMessage" style="display: none;" class="alert alert-success my-2" role="alert">
+                    Submitted successfully
+                </div>
             </div>
         </div>
     </div>
+
 </div>
