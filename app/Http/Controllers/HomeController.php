@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Coins;
+use App\Models\Links;
+use App\Models\Tags;
 class HomeController extends Controller
 {
     /**
@@ -18,7 +21,9 @@ class HomeController extends Controller
             $usertype = Auth()->user()->usertype;
 
             if ($usertype == 'user') {
-                return view('frontend.pages.home');
+                $coins = Coins::with('tags', 'links')->latest()->get();
+                return view('frontend.pages.home',compact('coins'));
+
             }else if ($usertype == 'admin') {
                 $count_users = User::where('usertype', '!=', 'admin')->count();
                 // dd($count_users);
@@ -39,7 +44,8 @@ class HomeController extends Controller
 
     public function coinDetails()
     {
-        return view('frontend.pages.coin-details');
+        $coins = Coins::with('tags', 'links')->latest()->get();
+        return view('frontend.pages.coin-details',compact('coins'));
     }
 
 

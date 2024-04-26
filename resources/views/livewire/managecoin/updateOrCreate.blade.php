@@ -39,7 +39,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="coin_price">Price</label>
-                                <input type="text" class="form-control @error('coin_price') is-invalid @enderror"
+                                <input type="number" class="form-control @error('coin_price') is-invalid @enderror"
                                     id="coin_price" name="coin_price" wire:model="coin_price">
                                 @if ($errors->has('coin_price'))
                                     <span class="text-danger">{{ $errors->first('coin_price') }}</span>
@@ -50,7 +50,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="coin_market_capacity">Market Capacity</label>
-                                <input type="text"
+                                <input type="number"
                                     class="form-control @error('coin_market_capacity') is-invalid @enderror"
                                     id="coin_market_capacity" name="coin_market_capacity"
                                     wire:model="coin_market_capacity">
@@ -60,7 +60,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="coin_volume">Volume</label>
-                                <input type="text" class="form-control @error('coin_volume') is-invalid @enderror"
+                                <input type="number" class="form-control @error('coin_volume') is-invalid @enderror"
                                     id="coin_volume" name="coin_volume" wire:model="coin_volume">
                                 @if ($errors->has('coin_volume'))
                                     <span class="text-danger">{{ $errors->first('coin_volume') }}</span>
@@ -68,7 +68,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="coin_circulating_supply">Circulating Supply</label>
-                                <input type="text"
+                                <input type="number"
                                     class="form-control @error('coin_circulating_supply') is-invalid @enderror"
                                     id="coin_circulating_supply" name="coin_circulating_supply"
                                     wire:model="coin_circulating_supply">
@@ -83,7 +83,7 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label for="coin_max_supply">Max Supply</label>
-                                <input type="text"
+                                <input type="number"
                                     class="form-control @error('coin_max_supply') is-invalid @enderror"
                                     id="coin_max_supply" name="coin_max_supply" wire:model="coin_max_supply">
                                 @if ($errors->has('coin_max_supply'))
@@ -94,7 +94,7 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label for="coin_fully_diluted_market_cap">Fully Diluted Market Cap</label>
-                                <input type="text"
+                                <input type="number"
                                     class="form-control @error('coin_fully_diluted_market_cap') is-invalid @enderror"
                                     id="coin_fully_diluted_market_cap" name="coin_fully_diluted_market_cap"
                                     wire:model="coin_fully_diluted_market_cap">
@@ -107,7 +107,7 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label for="coin_ucid">UCID</label>
-                                <input type="text" class="form-control @error('coin_ucid') is-invalid @enderror"
+                                <input type="number" class="form-control @error('coin_ucid') is-invalid @enderror"
                                     id="coin_ucid" name="coin_ucid" wire:model="coin_ucid">
                                 @if ($errors->has('coin_ucid'))
                                     <span class="text-danger">{{ $errors->first('coin_ucid') }}</span>
@@ -115,67 +115,86 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="form-group">
-                            <label for="coin_image">Image</label>
-                            <input type="file" class="form-control-file @error('coin_image') is-invalid @enderror"
-                                id="coin_image" name="coin_image" accept="image/*" wire:model="coin_image">
-                            @if ($errors->has('coin_image'))
-                                <span class="text-danger">{{ $errors->first('coin_image') }}</span>
-                            @endif
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <div id="image-preview" class="mt-2" style="width:100px"></div>
-                            </div>
 
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div id="links">
-                                <div class="form-group">
-                                    <label for="coin_links">Links</label>
-                                    <div class="input-group">
-                                        <input type="text"
-                                            class="form-control @error('coin_links') is-invalid @enderror"
-                                            name="coin_links[]" placeholder="Link URL"
-                                            value="{{ old('coin_links.0') }}">
-                                        <input type="text"
-                                            class="form-control @error('coin_links_name') is-invalid @enderror"
-                                            name="coin_links_name[]" placeholder="Link Name"
-                                            value="{{ old('coin_links_name.0') }}">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-success add-link" type="button">+</button>
-                                        </div>
-                                    </div>
-                                    @if ($errors->has('coin_links'))
-                                        <span class="text-danger">{{ $errors->first('coin_links') }}</span>
-                                    @endif
-                                    @if ($errors->has('coin_links_name'))
-                                        <span class="text-danger">{{ $errors->first('coin_links_name') }}</span>
-                                    @endif
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
                     <div class="row">
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="newTag">Add Tags</label>
-                                <textarea type="text" wire:model="newTag" wire:keydown.enter.prevent="createTag" class="form-control" rows="2"> </textarea>
+                                <textarea type="text" wire:model="newTag" wire:keydown.enter.prevent="createTag"
+                                    class="form-control" rows="2"></textarea>
                                 @if ($errors->has('newTag'))
-                                <span class="text-danger">{{ $errors->first('newTag') }}</span>
-                            @endif
+                                    <span class="text-danger">{{ $errors->first('newTag') }}</span>
+                                @endif
                             </div>
 
                             <div>
                                 @foreach($tags as $tag)
-                                <span class="badge badge-primary">{{ $tag }} <button wire:click="removeTag('{{ $tag }}')"><i class="fas fa-times"></i></button></span>
+                                    <div wire:key="{{ $tag }}">
+                                        <span class="badge badge-primary">{{ $tag }} <button
+                                                wire:click="removeTag('{{ $tag }}')"><i class="fas fa-times"></i></button></span>
+                                    </div>
                                 @endforeach
                             </div>
                         </div>
                     </div>
+
+
+                    <div class="row">
+                        <!-- Column for image upload -->
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="coin_image">Image</label>
+                                <div class="input-group">
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input @error('coin_image') is-invalid @enderror" id="coin_image" name="coin_image" accept="image/*" wire:model="coin_image">
+                                        <label class="custom-file-label" for="coin_image">Choose file</label>
+                                    </div>
+
+                                </div>
+                                @if ($errors->has('coin_image'))
+                                    <span class="text-danger">{{ $errors->first('coin_image') }}</span>
+                                @endif
+
+                                <!-- Image preview -->
+                                @if ($coin_image)
+                                    <img src="{{ $coin_image->temporaryUrl() }}" alt="Preview" style="max-width: 20%; margin-top: 10px;">
+                                @endif
+                            </div>
+                        </div>
+
+                        <!-- Column for links -->
+                        <div class="col-md-6">
+                            <div id="links">
+                                <div class="form-group">
+                                    <label for="coin_links">Links</label>
+                                    @foreach ($links as $index => $link)
+                                        <div class="input-group my-2">
+                                            <input type="text" wire:model="links.{{ $index }}.url" class="form-control" placeholder="Link URL">
+                                            <input type="text" wire:model="links.{{ $index }}.name" class="form-control" placeholder="Link Name">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-danger" wire:click="removeLink({{ $index }})" type="button">-</button>
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                    <div class="input-group">
+                                        <label class="input-group-text" for="add-link">Add Link</label>
+                                        <div class="input-group-append">
+                                            <button id="add-link" class="btn btn-success" wire:click="addLink" type="button">+</button>
+                                        </div>
+                                    </div>
+                                    @error('coin_links')
+                                        <span class="text-danger">{{ $message }}</span>
+                                    @enderror
+                                    @error('coin_links_name')
+                                        <span class="text-danger">{{ $message }}</span>
+                                    @enderror
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
 
                     <div class="mb-3 row">
                         <button type="submit" class="col-md-1 text-center  mx-2 btn btn-success ">
@@ -198,9 +217,7 @@
 
                 </form>
 
-                <div id="successMessage" style="display: none;" class="alert alert-success my-2" role="alert">
-                    Submitted successfully
-                </div>
+
             </div>
         </div>
     </div>

@@ -1,4 +1,5 @@
-@extends('layouts.app')
+@extends('frontend.layouts.app')
+
 
 @section('content')
     <div class="flex min-h-screen flex-col items-center justify-start gap-2 px-4 py-2 md:px-4">
@@ -21,7 +22,7 @@
                     </li>
 
                     <li>
-                        <a href="#" class="block transition hover:text-gray-700"> Bitcoin Price </a>
+                        <a href="#" class="block transition hover:text-gray-700">Bitcoin Price</a>
                     </li>
                 </ol>
             </nav>

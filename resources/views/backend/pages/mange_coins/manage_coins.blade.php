@@ -99,98 +99,103 @@
             }
         });
         var table = $('.data-table').DataTable({
-    processing: true,
-    serverSide: true,
-    ajax: "{{ route('coin.index') }}",
-    columns: [
-        {
-            data: 'DT_RowIndex',
-            name: 'DT_RowIndex',
-            title: 'No'
-        },
-        {
-            data: 'name',
-            name: 'name',
-            title: 'Name'
-        },
-        {
-            data: 'short_name',
-            name: 'short_name',
-            title: 'Short Name'
-        },
-        {
-            data: 'price',
-            name: 'price',
-            title: 'Price'
-        },
-        {
-            data: 'market_capacity',
-            name: 'market_capacity',
-            title: 'Market Capacity'
-        },
-        {
-            data: 'volume',
-            name: 'volume',
-            title: 'Volume'
-        },
-        {
-            data: 'circulating_supply',
-            name: 'circulating_supply',
-            title: 'Circulating Supply'
-        },
-        {
-            data: 'fully_diluted_market_cap',
-            name: 'fully_diluted_market_cap',
-            title: 'FDMC'
-        },
-        {
-            data: 'ucid',
-            name: 'ucid',
-            title: 'UCID'
-        },
-        {
-            data: 'image',
-            name: 'image',
-            title: 'Image'
-        },
-        {
-            data: 'tags',
-            name: 'tags',
-            title: 'Tags',
-            render: function(data) {
-                var badges = '';
-                data.forEach(function(tag) {
-                    badges += '<span class="badge badge-primary my-1">' + tag.name + '</span> ';
-                });
-                return badges;
-            }
-        },
-        {
-            data: 'links',
-            name: 'links',
-            title: 'Links',
-            render: function(data) {
-                var badges = '';
-                data.forEach(function(link) {
-                    badges += '<span class="badge badge-success my-1"><a href="' + link.url + '" target="_blank">' + link.name + '</a></span> ';
-                });
-                return badges;
-            }
-        },
-        {
-            data: 'action',
-            name: 'action',
-            orderable: false,
-            searchable: false,
-            title: 'Action'
-        }
-    ],
-    scrollX: true, // Enable horizontal scrolling
-    autoWidth: false, // Disable automatic column width calculation
-    columnDefs: [
-        { targets: '_all', width: 'auto' } // Set all columns to automatically adjust width
-    ]
-});
+            processing: true,
+            serverSide: true,
+            ajax: "{{ route('coin.index') }}",
+            columns: [{
+                    data: 'DT_RowIndex',
+                    name: 'DT_RowIndex',
+                    title: 'No'
+                },
+                {
+                    data: 'name',
+                    name: 'name',
+                    title: 'Name'
+                },
+                {
+                    data: 'short_name',
+                    name: 'short_name',
+                    title: 'Short Name'
+                },
+                {
+                    data: 'price',
+                    name: 'price',
+                    title: 'Price'
+                },
+                {
+                    data: 'market_capacity',
+                    name: 'market_capacity',
+                    title: 'Market Capacity'
+                },
+                {
+                    data: 'volume',
+                    name: 'volume',
+                    title: 'Volume'
+                },
+                {
+                    data: 'circulating_supply',
+                    name: 'circulating_supply',
+                    title: 'Circulating Supply'
+                },
+                {
+                    data: 'fully_diluted_market_cap',
+                    name: 'fully_diluted_market_cap',
+                    title: 'FDMC'
+                },
+                {
+                    data: 'ucid',
+                    name: 'ucid',
+                    title: 'UCID'
+                },
+                {
+                    data: 'image',
+                    name: 'image',
+                    title: 'Image'
+                },
+                {
+                    data: 'tags',
+                    name: 'tags',
+                    title: 'Tags',
+                    render: function(data) {
+                        var badges = '';
+                        data.forEach(function(tag) {
+                            badges += '<span class="badge badge-primary my-1">' + tag
+                                .name + '</span> ';
+                        });
+                        return badges;
+                    }
+                },
+                {
+                    data: 'links',
+                    name: 'links',
+                    title: 'Links',
+                    render: function(data) {
+                        var badges = '';
+                        data.forEach(function(link) {
+                            badges +=
+                                '<span class="badge badge-success my-1"><a href="' +
+                                link.url + '" target="_blank">' + link.name +
+                                '</a></span> ';
+                        });
+                        return badges;
+                    }
+                },
+                {
+                    data: 'action',
+                    name: 'action',
+                    orderable: false,
+                    searchable: false,
+                    title: 'Action'
+                }
+            ],
+            scrollX: true, // Enable horizontal scrolling
+            autoWidth: false, // Disable automatic column width calculation
+            columnDefs: [{
+                    targets: '_all',
+                    width: 'auto'
+                } // Set all columns to automatically adjust width
+            ]
+        });
 
 
         $('#createNewProduct').click(function() {

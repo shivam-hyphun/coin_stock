@@ -26,7 +26,27 @@
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <h3 class="card-title">Create Coins</h3>
+                        <div class="row">
+                            <div class="col-md-2">
+                                <h3 class="card-title">Manage Coins</h3>
+                            </div>
+
+                            <div class="col-md-10">
+
+                                    @if (session()->has('message'))
+                                    <div class="alert alert-success" role="alert">
+                                        {{ session('message') }}
+                                    </div>
+                                @endif
+
+                            </div>
+                        </div>
+
+
+
+
+
+
 
                         <div class="card-tools">
                             <button type="button" class="btn btn-tool" data-card-widget="collapse">
@@ -63,7 +83,7 @@
                                         @forelse ($coins as $coin)
                                             <tr wire:key="{{ $coin->id }}">
                                                 <th scope="row">{{ $loop->iteration }}</th>
-                                               
+
                                                 <td>{{ $coin->name }}</td>
                                                 <td>{{ $coin->short_name }}</td>
                                                 <td>{{ $coin->price }}</td>
@@ -73,18 +93,24 @@
                                                 <td>{{ $coin->max_supply }}</td>
                                                 <td>{{ $coin->fully_diluted_market_cap }}</td>
                                                 <td>{{ $coin->ucid }}</td>
-                                                <td>{{ $coin->image }}</td>
+                                                <td>
+                                                    @if($coin->image)
+                                                    <img src="{{ asset('storage/coins/'.$coin->image) }}" alt="Coin Image" class="img-fluid" style="height:2rem;width:2rem">
+                                                    @else
+                                                        <p>No image uploaded for this coin.</p>
+                                                    @endif
+                                                </td>
 
                                                 <td>
                                                     <button wire:click="edit({{ $coin->id }})"
-                                                        class="btn btn-primary btn-sm">
-                                                        <i class="bi bi-pencil-square"></i> Edit
+                                                        class="btn btn-primary btn-sm  my-1">
+                                                        <i class="fas fa-edit fa-fw"></i>
                                                     </button>
 
                                                     <button wire:click="delete({{ $coin->id }})"
-                                                        wire:confirm="Are you sure you want to delete this product?"
+                                                        wire:confirm="Are you sure you want to delete this Coin?"
                                                         class="btn btn-danger btn-sm">
-                                                        <i class="bi bi-trash"></i> Delete
+                                                        <i class="fas fa-trash-alt fa-fw"></i>
                                                     </button>
                                                 </td>
                                             </tr>
@@ -92,7 +118,7 @@
                                             <tr>
                                                 <td colspan="4">
                                                     <span class="text-danger">
-                                                        <strong>No Product Found!</strong>
+                                                        <strong>No Coins Found!</strong>
                                                     </span>
                                                 </td>
                                             </tr>
@@ -100,10 +126,7 @@
                                     </tbody>
                                 </table>
 
-                                <div id="successMessage" style="display: none;" class="alert alert-success my-2"
-                                    role="alert">
-                                    Submitted successfully
-                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -114,7 +137,6 @@
         </section>
 
     </div>
-
 
 
 </div>

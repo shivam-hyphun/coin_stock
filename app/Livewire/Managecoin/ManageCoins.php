@@ -44,14 +44,31 @@ class ManageCoins extends Component
 
     #[Validate('required')]
     public $coin_ucid = '';
-    public $coin_links = '';
-    // public $coin_tags='' ;
+
+
     public $coin_image = '';
     public $tags = []; // Adjusted to match the property name used in the blade view
     public $newTag = ''; // Added to handle the input of new tags
     public $isEdit = false;
 
     public $title = 'Add New coin';
+
+
+    public $links = [];
+    public $newLink = ['url' => '', 'name' => ''];
+
+    public function addLink()
+    {
+        $this->links[] = $this->newLink;
+        $this->newLink = ['url' => '', 'name' => '']; // Reset newLink to clear the input fields
+    }
+
+    public function removeLink($index)
+    {
+        unset($this->links[$index]);
+        $this->links = array_values($this->links); // Reindex the array after removing the link
+    }
+
 
     public function createTag()
     {
@@ -70,8 +87,15 @@ class ManageCoins extends Component
 
     public function removeTag($tagToRemove)
     {
+        // Find the index of the tag to remove
+        $index = array_search($tagToRemove, $this->tags);
+
         // Remove the specified tag from the $tags array
-        $this->tags = array_values(array_diff($this->tags, [$tagToRemove]));
+        if ($index !== false) {
+            unset($this->tags[$index]);
+            // Reindex the array to ensure consistency
+            $this->tags = array_values($this->tags);
+        }
     }
 
 
@@ -82,13 +106,14 @@ class ManageCoins extends Component
     {
         $this->title = 'Add New Coin';
 
-        $this->reset('coin_name', 'short_name', 'coin_price', 'coin_market_capacity', 'coin_volume', 'coin_circulating_supply', 'coin_max_supply', 'coin_fully_diluted_market_cap', 'coin_ucid', 'coin_image', 'tags');
+        $this->reset('coin_name', 'short_name', 'coin_price', 'coin_market_capacity', 'coin_volume', 'coin_circulating_supply', 'coin_max_supply', 'coin_fully_diluted_market_cap', 'coin_ucid', 'coin_image', 'tags', 'links');
 
         $this->isEdit = false;
     }
 
     public function save()
     {
+
         // Validate form fields
         $this->validate([
             'coin_name' => 'required',
@@ -118,9 +143,9 @@ class ManageCoins extends Component
 
         // Handle image upload
         if ($this->coin_image) {
-            $imageName = time() . '.' . $this->coin_image->extension();
+            $imageName = time() . '.' . $this->coin_image->getClientOriginalExtension();
             $this->coin_image->storeAs('public/coins', $imageName);
-            $coin->image = $imageName;
+            $coin->image = $imageName; // Assign the image name to the 'image' attribute of the $coin object
         }
 
         // Update or create coin image
@@ -129,11 +154,11 @@ class ManageCoins extends Component
         // Handle links
         if (!empty($this->links)) {
             foreach ($this->links as $key => $link) {
-                if (!empty($link)) {
+                if (!empty($link['url'])) { // Check if the URL is not empty
                     $newLink = new Links();
                     $newLink->coin_id = $coin->id; // Use the coin's ID
-                    $newLink->url = $link;
-                    $newLink->name = $this->links_name[$key] ?? '';
+                    $newLink->url = $link['url'];
+                    $newLink->name = $link['name'] ?? ''; // Assign an empty string if name is not provided
                     $newLink->save();
                 }
             }
@@ -152,7 +177,7 @@ class ManageCoins extends Component
             }
         }
 
-        session()->flash('success', 'Coin created successfully.');
+        session()->flash('message', $this->coin_id ? 'Coin is updated.' : 'Coin is added.');
 
         $this->resetFields();
     }
@@ -176,13 +201,22 @@ class ManageCoins extends Component
         $this->coin_fully_diluted_market_cap = $coin->fully_diluted_market_cap;
         $this->coin_ucid = $coin->ucid;
 
+        // Fetch all links associated with the coin
+        $this->links = Links::where('coin_id', $id)->get()->toArray();
+
+        // Fetch all tags associated with the coin
+        $this->tags = Tags::where('coin_id', $id)->pluck('name')->toArray();
+
         $this->isEdit = true;
     }
+
 
     public function cancel()
     {
         $this->resetFields();
     }
+
+
 
     public function delete($id)
     {
