@@ -13,6 +13,7 @@ use Livewire\WithFileUploads;
 class ManageCoins extends Component
 {
     use WithFileUploads;
+
     public $coins;
 
     #[Locked]
@@ -45,14 +46,11 @@ class ManageCoins extends Component
     #[Validate('required')]
     public $coin_ucid = '';
 
-
     public $coin_image = '';
-    public $tags = []; // Adjusted to match the property name used in the blade view
-    public $newTag = ''; // Added to handle the input of new tags
+    public $tags = [];
+    public $newTag = '';
     public $isEdit = false;
-
     public $title = 'Add New coin';
-
 
     public $links = [];
     public $newLink = ['url' => '', 'name' => ''];
@@ -60,19 +58,17 @@ class ManageCoins extends Component
     public function addLink()
     {
         $this->links[] = $this->newLink;
-        $this->newLink = ['url' => '', 'name' => '']; // Reset newLink to clear the input fields
+        $this->newLink = ['url' => '', 'name' => ''];
     }
 
     public function removeLink($index)
     {
         unset($this->links[$index]);
-        $this->links = array_values($this->links); // Reindex the array after removing the link
+        $this->links = array_values($this->links);
     }
-
 
     public function createTag()
     {
-        // Validate newTag against alphabets and numbers only
         $this->validate([
             'newTag' => 'required|regex:/^[a-zA-Z0-9\s]*$/',
         ], [
@@ -81,26 +77,19 @@ class ManageCoins extends Component
 
         if (!empty($this->newTag)) {
             $this->tags[] = $this->newTag;
-            $this->newTag = ''; // Clear the input field after adding the tag
+            $this->newTag = '';
         }
     }
 
     public function removeTag($tagToRemove)
     {
-        // Find the index of the tag to remove
         $index = array_search($tagToRemove, $this->tags);
 
-        // Remove the specified tag from the $tags array
         if ($index !== false) {
             unset($this->tags[$index]);
-            // Reindex the array to ensure consistency
             $this->tags = array_values($this->tags);
         }
     }
-
-
-
-
 
     public function resetFields()
     {
@@ -113,8 +102,6 @@ class ManageCoins extends Component
 
     public function save()
     {
-
-        // Validate form fields
         $this->validate([
             'coin_name' => 'required',
             'short_name' => 'required',
@@ -128,7 +115,6 @@ class ManageCoins extends Component
             'coin_image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
-        // Create or update coin
         $coin = Coins::updateOrCreate(['id' => $this->coin_id], [
             'name' => $this->coin_name,
             'short_name' => $this->short_name,
@@ -141,48 +127,41 @@ class ManageCoins extends Component
             'ucid' => $this->coin_ucid,
         ]);
 
-        // Handle image upload
         if ($this->coin_image) {
             $imageName = time() . '.' . $this->coin_image->getClientOriginalExtension();
             $this->coin_image->storeAs('public/coins', $imageName);
-            $coin->image = $imageName; // Assign the image name to the 'image' attribute of the $coin object
+            $coin->image = $imageName;
         }
 
-        // Update or create coin image
         $coin->save();
 
-        // Handle links
-        if (!empty($this->links)) {
-            foreach ($this->links as $key => $link) {
-                if (!empty($link['url'])) { // Check if the URL is not empty
-                    $newLink = new Links();
-                    $newLink->coin_id = $coin->id; // Use the coin's ID
-                    $newLink->url = $link['url'];
-                    $newLink->name = $link['name'] ?? ''; // Assign an empty string if name is not provided
-                    $newLink->save();
-                }
-            }
+        // Clear existing tags associated with the coin
+        Tags::where('coin_id', $coin->id)->delete();
+
+        // Save only the tags that are present in the $tags array
+        foreach ($this->tags as $tag) {
+            $newTag = new Tags();
+            $newTag->coin_id = $coin->id;
+            $newTag->name = $tag;
+            $newTag->save();
         }
 
-        // Handle tags
-        if (!empty($this->tags)) {
-            foreach ($this->tags as $tag) {
-                $trimmedTag = trim($tag);
-                if (!empty($trimmedTag)) {
-                    $newTag = new Tags();
-                    $newTag->coin_id = $coin->id; // Use the coin's ID
-                    $newTag->name = $trimmedTag;
-                    $newTag->save();
-                }
-            }
+        // Clear existing links associated with the coin
+        Links::where('coin_id', $coin->id)->delete();
+
+        // Save only the links that are present in the $links array
+        foreach ($this->links as $link) {
+            $newLink = new Links();
+            $newLink->coin_id = $coin->id;
+            $newLink->url = $link['url'];
+            $newLink->name = $link['name'];
+            $newLink->save();
         }
 
         session()->flash('message', $this->coin_id ? 'Coin is updated.' : 'Coin is added.');
 
         $this->resetFields();
     }
-
-
 
     public function edit($id)
     {
@@ -201,22 +180,19 @@ class ManageCoins extends Component
         $this->coin_fully_diluted_market_cap = $coin->fully_diluted_market_cap;
         $this->coin_ucid = $coin->ucid;
 
-        // Fetch all links associated with the coin
+        $this->tags = [];
+
         $this->links = Links::where('coin_id', $id)->get()->toArray();
 
-        // Fetch all tags associated with the coin
         $this->tags = Tags::where('coin_id', $id)->pluck('name')->toArray();
 
         $this->isEdit = true;
     }
 
-
     public function cancel()
     {
         $this->resetFields();
     }
-
-
 
     public function delete($id)
     {
@@ -225,12 +201,9 @@ class ManageCoins extends Component
         session()->flash('message', 'Product is deleted.');
     }
 
-
-
     public function render()
     {
         $this->coins = Coins::with('tags', 'links')->latest()->get();
-
 
         return view('livewire.managecoin.manage-coins');
     }

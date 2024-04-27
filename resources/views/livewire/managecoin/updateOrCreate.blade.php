@@ -121,24 +121,19 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="newTag">Add Tags</label>
-                                <textarea type="text" wire:model="newTag" wire:keydown.enter.prevent="createTag"
-                                    class="form-control" rows="2"></textarea>
+                                <textarea type="text" wire:model="newTag" wire:keydown.enter.prevent="createTag" class="form-control" rows="2"> </textarea>
                                 @if ($errors->has('newTag'))
-                                    <span class="text-danger">{{ $errors->first('newTag') }}</span>
+                                <span class="text-danger">{{ $errors->first('newTag') }}</span>
                                 @endif
                             </div>
 
                             <div>
                                 @foreach($tags as $tag)
-                                    <div wire:key="{{ $tag }}">
-                                        <span class="badge badge-primary">{{ $tag }} <button
-                                                wire:click="removeTag('{{ $tag }}')"><i class="fas fa-times"></i></button></span>
-                                    </div>
+                                <span class="badge badge-primary">{{ $tag }} <button type="button" wire:click="removeTag('{{ $tag }}')"><i class="fas fa-times"></i></button></span>
                                 @endforeach
                             </div>
                         </div>
                     </div>
-
 
                     <div class="row">
                         <!-- Column for image upload -->
