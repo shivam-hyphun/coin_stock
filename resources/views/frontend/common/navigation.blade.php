@@ -1,7 +1,7 @@
 <div class="mx-auto flex w-full max-w-8xl flex-col-reverse divide-y divide-gray-700 px-4 md:flex-col">
 
 
- 
+
 
 
     <div class="mx-auto flex w-full max-w-8xl justify-between bg-dark-black py-2">
@@ -238,7 +238,6 @@
                 </button>
             </div>
             <div class="relative h-full" data-menu>
-
                 <div class="relative">
                     <div id="profileDropdownTrigger" class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full hover:bg-gray-700 focus:bg-gray-700 focus:outline-none">
                         <svg xmlns="http://www.w3.org/2000/svg" class="focus:bg-gray-700" width="30" height="30" viewBox="0 0 24 24">
@@ -256,6 +255,11 @@
                                 <button type="submit" class="block w-full text-left px-4 py-2 text-sm text-white-700 hover:bg-white-100 hover:text-dark-100 focus:outline-none focus:bg-gray-100">Log Out</button>
                             </form>
                         </div>
+                        @else
+                        <div class="py-1">
+                            <a href="{{ route('login') }}" class="block px-4 py-2 text-sm text-white-700 hover:bg-white-100 hover:text-dark-100">Log In</a>
+                            <a href="{{ route('register') }}" class="block px-4 py-2 text-sm text-white-700 hover:bg-white-100 hover:text-dark-100">Register</a>
+                        </div>
                         @endauth
                     </div>
                 </div>
@@ -265,10 +269,8 @@
                         document.getElementById('profileDropdown').classList.toggle('hidden');
                     });
                 </script>
-
-
-
             </div>
+
 
         </div>
 

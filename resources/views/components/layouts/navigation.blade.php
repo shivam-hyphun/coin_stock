@@ -139,6 +139,23 @@
           <i class="fas fa-th-large"></i>
         </a>
       </li>
+      <li class="nav-item">
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="profileDropdownTrigger" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-user"></i>
+            </button>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="profileDropdownTrigger">
+                @auth
+                <a class="dropdown-item" href="{{ route('profile.edit') }}">Profile</a>
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <button type="submit" class="dropdown-item">Log Out</button>
+                </form>
+                @endauth
+            </div>
+        </div>
+
+      </li>
     </ul>
   </nav>
   <!-- /.navbar -->

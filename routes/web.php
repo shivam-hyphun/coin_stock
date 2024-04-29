@@ -20,9 +20,7 @@ use App\Livewire\Managecoin\CoinDetailsComponent;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [HomeController::class, 'show']);
 
 
 
@@ -41,12 +39,15 @@ Route::middleware('auth')->group(function () {
     Route::get('/dashboard', [AdminController::class, 'index'])->middleware('auth', 'verified', 'admin')->name('admin_dashboard');
     Route::get('/user_details', [AdminController::class, 'users'])->middleware('auth', 'verified', 'admin')->name('user_details');
 
-    Route::resource('users', UserController::class);
+    Route::middleware(['auth', 'verified', 'admin'])->group(function () {
+        Route::resource('users', UserController::class);
+    });
+    
     // CoinsController
-    Route::resource('coin', CoinsController::class);
+    Route::resource('coin', CoinsController::class)->middleware('auth', 'verified', 'admin');
 
 
-    Route::get('/manage_coins', ManageCoins::class)->middleware('auth', 'verified', 'admin');
+    Route::get('/manage_coins', ManageCoins::class)->middleware('auth', 'verified', 'admin')->name('manage.coin');
     Route::get('/coin-details/{coin}', CoinDetailsComponent::class)->name('coin.details');
 });
 

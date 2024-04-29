@@ -16,15 +16,15 @@ class HomeController extends Controller
      */
     public function index()
     {
+
+
         if (Auth::id()) {
 
             $usertype = Auth()->user()->usertype;
-
-            if ($usertype == 'user') {
-                $coins = Coins::with('tags', 'links')->latest()->get();
-                return view('frontend.pages.home',compact('coins'));
-
-            }else if ($usertype == 'admin') {
+            if ($usertype == 'user'){
+                return redirect('/');
+            }
+            if ($usertype == 'admin') {
                 $count_users = User::where('usertype', '!=', 'admin')->count();
                 // dd($count_users);
                 return view('backend.pages.index',compact('count_users'));
@@ -42,10 +42,9 @@ class HomeController extends Controller
      * It returns the view for the coin details page.
      */
 
-    public function coinDetails()
+    public function show()
     {
-        $coins = Coins::with('tags', 'links')->latest()->get();
-        return view('frontend.pages.coin-details',compact('coins'));
+        return view('frontend.pages.home');
     }
 
 

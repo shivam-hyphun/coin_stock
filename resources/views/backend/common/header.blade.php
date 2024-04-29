@@ -170,35 +170,19 @@
         </a>
       </li>
       <li class="nav-item">
-        <div class="position-relative h-100" data-menu>
-
-            <div class="position-relative">
-                <div id="profileDropdownTrigger" class="d-flex h-10 w-10 cursor-pointer align-items-center justify-content-center rounded-circle bg-secondary hover-bg-gray-700 focus-bg-gray-700 focus-outline-none">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="focus-bg-gray-700" width="30" height="30" viewBox="0 0 24 24">
-                        <rect x="0" y="0" width="30" height="24" fill="none" stroke="none" />
-                        <path fill="currentColor" d="M12 12.25a3.75 3.75 0 1 1 3.75-3.75A3.75 3.75 0 0 1 12 12.25m0-6a2.25 2.25 0 1 0 2.25 2.25A2.25 2.25 0 0 0 12 6.25m7 13a.76.76 0 0 1-.75-.75c0-1.95-1.06-3.25-6.25-3.25s-6.25 1.3-6.25 3.25a.75.75 0 0 1-1.5 0c0-4.75 5.43-4.75 7.75-4.75s7.75 0 7.75 4.75a.76.76 0 0 1-.75.75" />
-                    </svg>
-                </div>
-
-                <div id="profileDropdown" class="position-absolute d-none right-0 mt-2 w-48 bg-dark text-white rounded shadow-lg z-index-10">
-                    @auth
-                    <div class="py-1">
-                        <a href="{{ route('profile.edit') }}" class="d-block px-4 py-2 text-sm text-white-700 hover-bg-white-100 hover-text-dark-100">Profile</a>
-                        <form method="POST" action="{{ route('logout') }}">
-                            @csrf
-                            <button type="submit" class="d-block w-100 text-left px-4 py-2 text-sm text-white-700 hover-bg-white-100 hover-text-dark-100 focus-outline-none focus-bg-gray-100">Log Out</button>
-                        </form>
-                    </div>
-                    @endauth
-                </div>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="profileDropdownTrigger" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-user"></i>
+            </button>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="profileDropdownTrigger">
+                @auth
+                <a class="dropdown-item" href="{{ route('profile.edit') }}">Profile</a>
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <button type="submit" class="dropdown-item">Log Out</button>
+                </form>
+                @endauth
             </div>
-
-            <script>
-                document.getElementById('profileDropdownTrigger').addEventListener('click', function() {
-                    document.getElementById('profileDropdown').classList.toggle('d-none');
-                });
-            </script>
-
         </div>
 
       </li>
