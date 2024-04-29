@@ -22,7 +22,7 @@
                     </li>
 
                     <li>
-                        <a href="#" class="block transition hover:text-gray-700">Bitcoin Price</a>
+                        <a href="#" class="block transition hover:text-gray-700">{{ $coins->name }} Price</a>
                     </li>
                 </ol>
             </nav>
@@ -36,14 +36,14 @@
                 </div>
                 <div class="flex w-full items-center justify-start gap-2">
                     <div class="h-10 w-10">
-                        <img class="h-full w-full" src="{{ asset('images/bit-coin.svg') }}" alt="bitCoin" />
+                        <img class="h-full w-full" src="{{ asset('storage/coins/' . $coins->image) }}" alt="coin image" />
                     </div>
-                    <h6 class="font-bold text-gray-300">Bitcoin </h6>
-                    <p class="text-sm font-light">BTC Price</p>
+                    <h6 class="font-bold text-gray-300">{{ $coins->name }} </h6>
+                    <p class="text-sm font-light">{{ $coins->short_name }} Price</p>
 
                 </div>
                 <div class="flex w-full items-center justify-start gap-2">
-                    <h4 class="font-bold">$43,185.66</h4>
+                    <h4 class="font-bold">${{ number_format($coins->price, 2) }}</h4>
                     <span class="flex flex-row items-center gap-1"><i
                             class="ri-arrow-drop-down-fill text-3xl text-danger"></i>
                         <span class="text-danger">5.4%</span></span>
@@ -51,7 +51,7 @@
                     <i class="ri-information-line text-xl text-gray-700"></i>
                 </div>
                 <div class="flex w-full items-center justify-start gap-2">
-                    <p class="text-sm">1.0000 BTC 0.0%</p>
+                    <p class="text-sm">1.0000 {{ $coins->short_name }} 0.0%</p>
                     <span class="flex flex-row items-center gap-1">
                         <span class="text-danger">5.4%</span>
                         <i class="ri-corner-right-up-line text-xl text-danger"></i>
@@ -113,12 +113,12 @@
                     <div class="grid w-full grid-cols-2 gap-1 gap-x-5">
                         <div class="div flex justify-between border-b border-gray-700 py-2 text-sm">
                             <span class="text-gray-500">Market Cap </span>
-                            <span class="text-gray-300">$833,618,766,055 </span>
+                            <span class="text-gray-300">${{ number_format($coins->market_capacity, 2) }}</span>
 
                         </div>
                         <div class="div flex justify-between border-b border-gray-700 py-2 text-sm">
                             <span class="text-gray-500">Circulating Supply</span>
-                            <span class="text-gray-300">19,599,081 </span>
+                            <span class="text-gray-300">{{ number_format($coins->circulating_supply) }} </span>
 
                         </div>
                         <div class="div flex justify-between border-b border-gray-700 py-2 text-sm">
@@ -133,12 +133,12 @@
                         </div>
                         <div class="div flex justify-between border-b border-gray-700 py-2 text-sm">
                             <span class="text-gray-500">Fully Diluted Valuation</span>
-                            <span class="text-gray-300">$893,204,844,000</span>
+                            <span class="text-gray-300">${{ number_format($coins->fully_diluted_market_cap, 2) }}</span>
 
                         </div>
                         <div class="div flex justify-between border-b border-gray-700 py-2 text-sm">
                             <span class="text-gray-500">Max Supply</span>
-                            <span class="text-gray-300">21,000,000</span>
+                            <span class="text-gray-300">{{ number_format($coins->max_supply, 2) }}</span>
 
                         </div>
 
@@ -154,10 +154,11 @@
                 <div class="flex w-full items-center gap-1">
                     <p class="w-1/5 text-base">Website</p>
                     <div class="flex w-4/5 flex-wrap gap-1">
-                        <a href="#"
-                            class="ml-2 rounded-lg bg-gray-700 px-2 py-0.5 text-sm text-white hover:text-gray-100">bitcoin.org</a>
-                        <a href="#"
-                            class="ml-2 rounded-lg bg-gray-700 px-2 py-0.5 text-sm text-white hover:text-gray-100">white-paper</a>
+                        @foreach ($coins->links as $link)
+                        <a href="{{ $link->url }}"
+                            class="ml-2 rounded-lg bg-gray-700 px-2 py-0.5 text-sm text-white hover:text-gray-100">{{ $link->name }}</a>
+
+                @endforeach
                     </div>
 
 
@@ -237,11 +238,13 @@
                     </div>
                 </div>
                 <div class="flex w-full items-start gap-1">
-                    <p class="w-1/5 whitespace-nowrap text-base">Categories</p>
+                    <p class="w-1/5 whitespace-nowrap text-base">Tags</p>
                     <div class="flex w-4/5 flex-wrap gap-1">
+                        @foreach ($coins->tags as $tag)
                         <a href="#"
-                            class="ml-2 rounded-lg bg-gray-700 px-2 py-0.5 text-sm text-white hover:text-gray-100">
-                            Cryptocurrency</a>
+                        class="ml-2 rounded-lg bg-gray-700 px-2 py-0.5 text-sm text-white hover:text-gray-100">
+                        {{ $tag->name }}</a>
+                @endforeach
 
 
                     </div>
@@ -254,6 +257,8 @@
             </div>
 
         </div>
+
+
         <div class="mx-auto flex w-full max-w-8xl items-center justify-between gap-3 gap-x-8">
             <div x-data="{ selectedTab: 'Overview', tabItems: ['Overview', 'Markets', 'Historical Data', 'Tokenomics'] }" class="w-full">
                 <div class="mx-auto">
@@ -408,7 +413,8 @@
                                                     <div class="flex items-center">
                                                         <div class="h-5 w-5">
                                                             <img class="h-full w-full"
-                                                                src="{{ asset('images/bit-coin.svg') }}" alt="bitCoin" />
+                                                                src="{{ asset('images/bit-coin.svg') }}"
+                                                                alt="bitCoin" />
                                                         </div>
                                                         <div class="pl-4">
                                                             <p class="text-sm font-bold">Bitcoin</p>

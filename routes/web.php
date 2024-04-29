@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\CoinsController;
 use App\Livewire\Managecoin\ManageCoins;
+use App\Livewire\Managecoin\CoinDetailsComponent;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,9 +46,11 @@ Route::middleware('auth')->group(function () {
     Route::resource('coin', CoinsController::class);
 
 
-
+    Route::get('/manage_coins', ManageCoins::class)->middleware('auth', 'verified', 'admin');
+    Route::get('/coin-details/{coin}', CoinDetailsComponent::class)->name('coin.details');
 });
-Route::get('/manage_coins', ManageCoins::class);
+
+
 
 
 

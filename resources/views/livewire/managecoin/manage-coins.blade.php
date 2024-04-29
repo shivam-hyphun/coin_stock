@@ -1,7 +1,4 @@
 
-
-
-
     <div class="content-wrapper">
         <div class="content-header">
             <div class="container-fluid">
@@ -20,28 +17,22 @@
         </div>
         <section class="content">
             <div class="container-fluid">
-
+                <!-- Include livewire managecoin updateOrCreate here -->
                 @include('livewire.managecoin.updateOrCreate')
-
-
                 <div class="card card-default">
                     <div class="card-header">
                         <div class="row">
                             <div class="col-md-2">
                                 <h3 class="card-title">Manage Coins</h3>
                             </div>
-
                             <div class="col-md-10">
-
-                                    @if (session()->has('message'))
+                                @if (session()->has('message'))
                                     <div class="alert alert-success" role="alert">
                                         {{ session('message') }}
                                     </div>
                                 @endif
-
                             </div>
                         </div>
-
 
                         <div class="card-tools">
                             <button type="button" class="btn btn-tool" data-card-widget="collapse">
@@ -56,41 +47,41 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-12">
-
-                                <table class="table table-striped table-bordered">
-                                    <thead>
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-bordered">
+                                        <thead>
                                         <tr>
                                             <th scope="col">S#</th>
-                                            <th scope="col">Name</th>
-                                            <th scope="col">Short Name</th>
-                                            <th scope="col">Price</th>
-                                            <th scope="col">Market Capacity</th>
-                                            <th scope="col">Volume</th>
-                                            <th scope="col">Circulating Supply</th>
-                                            <th scope="col">Max Supply</th>
-                                            <th scope="col">Fully Diluted Market Cap</th>
-                                            <th scope="col">UCID</th>
-                                            <th scope="col">Image</th>
-                                            <th scope="col">Action</th>
+                                            <th scope="col" class="text-center">Name</th>
+                                            <th scope="col" class="text-center">Short Name</th>
+                                            <th scope="col" class="text-center">Price</th>
+                                            <th scope="col" class="text-center">Market Capacity</th>
+                                            <th scope="col" class="text-center">Volume</th>
+                                            <th scope="col" class="text-center">Circulating Supply</th>
+                                            <th scope="col" class="text-center">Max Supply</th>
+                                            <th scope="col" class="text-center">Fully Diluted Market Cap</th>
+                                            <th scope="col" class="text-center">UCID</th>
+                                            <th scope="col" class="text-center">Image</th>
+                                            <th scope="col" class="text-center">Action</th>
                                         </tr>
-                                    </thead>
-                                    <tbody>
+                                        </thead>
+                                        <tbody>
                                         @forelse ($coins as $coin)
                                             <tr wire:key="{{ $coin->id }}">
                                                 <th scope="row">{{ $loop->iteration }}</th>
 
                                                 <td>{{ $coin->name }}</td>
                                                 <td>{{ $coin->short_name }}</td>
-                                                <td>{{ $coin->price }}</td>
-                                                <td>{{ $coin->market_capacity }}</td>
-                                                <td>{{ $coin->volume }}</td>
-                                                <td>{{ $coin->circulating_supply }}</td>
-                                                <td>{{ $coin->max_supply }}</td>
-                                                <td>{{ $coin->fully_diluted_market_cap }}</td>
-                                                <td>{{ $coin->ucid }}</td>
+                                                <td>{{ number_format($coin->price,2) }}</td>
+                                                <td>${{number_format($coin->market_capacity,2) }}</td>
+                                                <td>${{ number_format($coin->volume,2)}}</td>
+                                                <td>${{number_format( $coin->circulating_supply,2) }}</td>
+                                                <td>${{number_format( $coin->max_supply,2) }}</td>
+                                                <td>${{number_format( $coin->fully_diluted_market_cap,2) }}</td>
+                                                <td>{{$coin->ucid }}</td>
                                                 <td>
                                                     @if($coin->image)
-                                                    <img src="{{ asset('storage/coins/'.$coin->image) }}" alt="Coin Image" class="img-fluid" style="height:2rem;width:2rem">
+                                                        <img src="{{ asset('storage/coins/'.$coin->image) }}" alt="Coin Image" class="img-fluid" style="height:2rem;width:2rem">
                                                     @else
                                                         <p>No image uploaded for this coin.</p>
                                                     @endif
@@ -98,13 +89,13 @@
 
                                                 <td>
                                                     <button wire:click="edit({{ $coin->id }})"
-                                                        class="btn btn-primary btn-sm  my-1">
+                                                            class="btn btn-primary btn-sm  my-1">
                                                         <i class="fas fa-edit fa-fw"></i>
                                                     </button>
 
                                                     <button wire:click="delete({{ $coin->id }})"
-                                                        wire:confirm="Are you sure you want to delete this Coin?"
-                                                        class="btn btn-danger btn-sm">
+                                                            wire:confirm="Are you sure you want to delete this Coin?"
+                                                            class="btn btn-danger btn-sm">
                                                         <i class="fas fa-trash-alt fa-fw"></i>
                                                     </button>
                                                 </td>
@@ -118,19 +109,15 @@
                                                 </td>
                                             </tr>
                                         @endforelse
-                                    </tbody>
-                                </table>
-
-
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-
             </div>
         </section>
-
     </div>
 
 

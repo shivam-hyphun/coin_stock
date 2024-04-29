@@ -149,7 +149,7 @@
                                 <th class="px-2 text-left font-normal">Last 7 Days</th>
                             </tr>
                         </thead>
-                        <tbody class="w-full">
+
                             <livewire:managecoin.home-coin-list-component />
 
 

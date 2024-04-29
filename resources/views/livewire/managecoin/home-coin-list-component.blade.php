@@ -1,21 +1,22 @@
+<tbody class="w-full">
 @foreach ($coins as $coin)
 <tr tabindex="0"
 class="h-20 cursor-pointer border-b border-t border-gray-700 bg-dark-black text-sm leading-none text-white hover:bg-dark focus:outline-none">
 <td>
-    <a href="{{ route('coin-details') }}">
+    <a href="{{ route('coin.details',$coin->id) }}">
         <div class="flex items-end">
             <div class="cursor-pointer px-2">
                 <i class="ri-star-line text-base"></i>
             </div>
             <div class="pl-2">
-                <p class="text-sm">1</p>
+                <p class="text-sm">{{ $loop->iteration }}</p>
 
             </div>
         </div>
     </a>
 </td>
 <td class="cursor-pointer pl-4 pr-10">
-    <a href="{{ route('coin-details') }}">
+    <a href="{{ route('coin.details',$coin->id) }}">
         <div class="flex items-center">
             <div class="h-5 w-5">
                 <img class="h-full w-full" src="{{ asset('storage/coins/'.$coin->image) }}"
@@ -67,3 +68,5 @@ class="h-20 cursor-pointer border-b border-t border-gray-700 bg-dark-black text-
 
 @endforeach
 
+
+</tbody>

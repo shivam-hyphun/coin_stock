@@ -40,7 +40,7 @@
                             <div class="form-group">
                                 <label for="coin_price">Price</label>
                                 <input type="number" class="form-control @error('coin_price') is-invalid @enderror"
-                                    id="coin_price" name="coin_price" wire:model="coin_price">
+                                    id="coin_price" name="coin_price" wire:model="coin_price"  min="1">
                                 @if ($errors->has('coin_price'))
                                     <span class="text-danger">{{ $errors->first('coin_price') }}</span>
                                 @endif
@@ -53,7 +53,7 @@
                                 <input type="number"
                                     class="form-control @error('coin_market_capacity') is-invalid @enderror"
                                     id="coin_market_capacity" name="coin_market_capacity"
-                                    wire:model="coin_market_capacity">
+                                    wire:model="coin_market_capacity" min="1">
                                 @if ($errors->has('coin_market_capacity'))
                                     <span class="text-danger">{{ $errors->first('coin_market_capacity') }}</span>
                                 @endif
@@ -61,7 +61,7 @@
                             <div class="form-group">
                                 <label for="coin_volume">Volume</label>
                                 <input type="number" class="form-control @error('coin_volume') is-invalid @enderror"
-                                    id="coin_volume" name="coin_volume" wire:model="coin_volume">
+                                    id="coin_volume" name="coin_volume" wire:model="coin_volume" min="1">
                                 @if ($errors->has('coin_volume'))
                                     <span class="text-danger">{{ $errors->first('coin_volume') }}</span>
                                 @endif
@@ -71,7 +71,7 @@
                                 <input type="number"
                                     class="form-control @error('coin_circulating_supply') is-invalid @enderror"
                                     id="coin_circulating_supply" name="coin_circulating_supply"
-                                    wire:model="coin_circulating_supply">
+                                    wire:model="coin_circulating_supply"  min="1">
                                 @if ($errors->has('coin_circulating_supply'))
                                     <span class="text-danger">{{ $errors->first('coin_circulating_supply') }}</span>
                                 @endif
@@ -85,7 +85,7 @@
                                 <label for="coin_max_supply">Max Supply</label>
                                 <input type="number"
                                     class="form-control @error('coin_max_supply') is-invalid @enderror"
-                                    id="coin_max_supply" name="coin_max_supply" wire:model="coin_max_supply">
+                                    id="coin_max_supply" name="coin_max_supply" wire:model="coin_max_supply"  min="1">
                                 @if ($errors->has('coin_max_supply'))
                                     <span class="text-danger">{{ $errors->first('coin_max_supply') }}</span>
                                 @endif
@@ -97,7 +97,7 @@
                                 <input type="number"
                                     class="form-control @error('coin_fully_diluted_market_cap') is-invalid @enderror"
                                     id="coin_fully_diluted_market_cap" name="coin_fully_diluted_market_cap"
-                                    wire:model="coin_fully_diluted_market_cap">
+                                    wire:model="coin_fully_diluted_market_cap"  min="1">
                                 @if ($errors->has('coin_fully_diluted_market_cap'))
                                     <span
                                         class="text-danger">{{ $errors->first('coin_fully_diluted_market_cap') }}</span>
@@ -108,7 +108,7 @@
                             <div class="form-group">
                                 <label for="coin_ucid">UCID</label>
                                 <input type="number" class="form-control @error('coin_ucid') is-invalid @enderror"
-                                    id="coin_ucid" name="coin_ucid" wire:model="coin_ucid">
+                                    id="coin_ucid" name="coin_ucid" wire:model="coin_ucid"  min="1">
                                 @if ($errors->has('coin_ucid'))
                                     <span class="text-danger">{{ $errors->first('coin_ucid') }}</span>
                                 @endif
@@ -145,11 +145,10 @@
                                         <input type="file" class="custom-file-input @error('coin_image') is-invalid @enderror" id="coin_image" name="coin_image" accept="image/*" wire:model="coin_image">
                                         <label class="custom-file-label" for="coin_image">Choose file</label>
                                     </div>
-
+                                    @error('coin_image')
+                                        <div class="invalid-feedback">{{ $message }}</div>
+                                    @enderror
                                 </div>
-                                @if ($errors->has('coin_image'))
-                                    <span class="text-danger">{{ $errors->first('coin_image') }}</span>
-                                @endif
 
                                 <!-- Image preview -->
                                 @if ($coin_image)
@@ -157,6 +156,7 @@
                                 @endif
                             </div>
                         </div>
+
 
                         <!-- Column for links -->
                         <div class="col-md-6">
