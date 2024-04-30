@@ -25,9 +25,8 @@ class HomeController extends Controller
                 return redirect('/');
             }
             if ($usertype == 'admin') {
-                $count_users = User::where('usertype', '!=', 'admin')->count();
-                // dd($count_users);
-                return view('backend.pages.index',compact('count_users'));
+             
+                return redirect('manage_dashboard');
             }else{
                 return redirect()->back();
             }

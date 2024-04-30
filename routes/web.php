@@ -8,6 +8,9 @@ use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\CoinsController;
 use App\Livewire\Managecoin\ManageCoins;
 use App\Livewire\Managecoin\CoinDetailsComponent;
+use App\Livewire\ManageUsers\UserDetailsComponent;
+use App\Livewire\ManageDashboard\AdminDashboardComponent;
+use App\Livewire\ManageProfile\UserProfileComponent;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,9 +29,9 @@ Route::get('/', [HomeController::class, 'show']);
 
 
 Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    // Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    // Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    // Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     //  Home Controller Routes
     Route::get('/home', [HomeController::class, 'index'])->middleware('auth', 'verified')->name('home');
@@ -42,13 +45,19 @@ Route::middleware('auth')->group(function () {
     Route::middleware(['auth', 'verified', 'admin'])->group(function () {
         Route::resource('users', UserController::class);
     });
-    
+
     // CoinsController
     Route::resource('coin', CoinsController::class)->middleware('auth', 'verified', 'admin');
 
-
+  // coins details though livewire
     Route::get('/manage_coins', ManageCoins::class)->middleware('auth', 'verified', 'admin')->name('manage.coin');
     Route::get('/coin-details/{coin}', CoinDetailsComponent::class)->name('coin.details');
+
+    // users details though livewire
+    Route::get('/manage_users', UserDetailsComponent::class)->middleware('auth', 'verified', 'admin')->name('manage.user');
+    Route::get('/manage_dashboard', AdminDashboardComponent::class)->middleware('auth', 'verified', 'admin')->name('manage.dashboard');
+    Route::get('/profile', UserProfileComponent::class)->name('manage.profile');
+
 });
 
 

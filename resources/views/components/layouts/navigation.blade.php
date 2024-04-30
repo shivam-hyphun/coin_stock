@@ -13,7 +13,7 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Home</a>
+        <a href="/" class="nav-link">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Contact</a>
@@ -146,7 +146,7 @@
             </button>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="profileDropdownTrigger">
                 @auth
-                <a class="dropdown-item" href="{{ route('profile.edit') }}">Profile</a>
+                <a class="dropdown-item" href="{{ route('manage.profile') }}">Profile</a>
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
                     <button type="submit" class="dropdown-item">Log Out</button>

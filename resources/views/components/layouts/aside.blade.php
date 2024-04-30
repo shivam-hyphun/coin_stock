@@ -9,15 +9,17 @@
     <!-- Sidebar -->
     <div class="sidebar">
       <!-- Sidebar user panel (optional) -->
-      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-        <div class="image">
-            <a href="/profile" class="d-block"> <img src="{{asset('css/admin/dist/img/user2-160x160.jpg')}}" class="img-circle elevation-2" alt="User Image"></a>
+
+        {{-- <div class="image">
+            <a href="{{ route('manage.profile') }}" class="d-block"> <img src="{{asset('css/admin/dist/img/user2-160x160.jpg')}}" class="img-circle elevation-2" alt="User Image"></a>
 
         </div>
         <div class="info">
-          <a href="/profile" class="d-block">{{ Auth::user()->name }}</a>
-        </div>
-      </div>
+          <a href="{{ route('manage.profile') }}" class="d-block">{{ Auth::user()->name }}</a>
+        </div> --}}
+
+        <livewire:aside.user-profile-component />
+
 
       <!-- SidebarSearch Form -->
       <div class="form-inline">
@@ -47,10 +49,19 @@
 
           </li>
           <li class="nav-item">
-            <a href="pages/widgets.html" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+            <a href="{{ route('manage.coin') }}" class="nav-link">
+              <i class="nav-icon fab fa-bitcoin"></i>
               <p>
-                Widgets
+                Manage Coins
+                <span class="right badge badge-danger">New</span>
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{ route('manage.user') }}" class="nav-link">
+              <i class="nav-icon fas fa-user"></i>
+              <p>
+                Manage Users
                 <span class="right badge badge-danger">New</span>
               </p>
             </a>
@@ -210,7 +221,7 @@
               </li>
             </ul>
           </li> --}}
-          <li class="nav-item">
+          {{-- <li class="nav-item">
             <a href="#" class="nav-link">
                 <i class="nav-icon fab fa-bitcoin"></i>
               <p>
@@ -268,7 +279,7 @@
                 </a>
               </li>
             </ul>
-          </li>
+          </li> --}}
           {{-- <li class="nav-header">EXAMPLES</li>
           <li class="nav-item">
             <a href="pages/calendar.html" class="nav-link">

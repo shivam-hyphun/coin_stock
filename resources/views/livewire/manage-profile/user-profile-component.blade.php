@@ -1,5 +1,4 @@
 
-
 <div class="content-wrapper">
     <div class="content-header">
         <div class="container-fluid">
@@ -26,8 +25,7 @@
                             <h3 class="card-title">Profile Information</h3>
                         </div>
                         <div class="card-body">
-                            <!-- Include the profile information form component here -->
-                            <livewire:profile-edit-component />
+                            <livewire:manage-profile.profile-edit-component/>
                         </div>
                     </div>
                 </div>
@@ -39,8 +37,8 @@
                             <h3 class="card-title">Update Password</h3>
                         </div>
                         <div class="card-body">
-                            <!-- Include the profile information form component here -->
-                            @include('\profile\partials\update-password-form')
+
+                            <livewire:manage-profile.password-update-component/>
                         </div>
                     </div>
                 </div>
@@ -52,8 +50,8 @@
                             <h3 class="card-title">Delete Account</h3>
                         </div>
                         <div class="card-body">
-                            <!-- Include the profile information form component here -->
-                            @include('\profile\partials\delete-user-form')
+
+                            <livewire:manage-profile.account-delete-component/>
                         </div>
                     </div>
                 </div>

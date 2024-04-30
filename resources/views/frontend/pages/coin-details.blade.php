@@ -79,6 +79,12 @@
                         </button>
                     </div>
                     <div class="flex">
+                        <button wire:click="shoutMeBuyCoin"
+                                class="h-9 w-10 rounded-md border border-gray-700 transition-all duration-200 ease-in-out hover:bg-gray-700">
+                            <i class="ri-shopping-cart-2-line text-lg text-white"></i>
+                        </button>
+                    </div>
+                    <div class="flex">
                         <span class="whitespace-nowrap rounded-full bg-gray-700 px-2.5 py-1 text-sm text-white">
                             <i class="ri-star-fill text-yellow-400"></i> on 1,432,410 watchlists
                         </span>
