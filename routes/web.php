@@ -50,7 +50,7 @@ Route::middleware('auth')->group(function () {
     // CoinsController
     Route::resource('coin', CoinsController::class)->middleware('auth', 'verified', 'admin');
 
-  // coins details though livewire
+    // coins details though livewire
     Route::get('/manage_coins', ManageCoins::class)->middleware('auth', 'verified', 'admin')->name('manage.coin');
     Route::get('/coin-details/{coin}', CoinDetailsComponent::class)->name('coin.details');
 
@@ -60,6 +60,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', UserProfileComponent::class)->name('manage.profile');
     Route::get('/purchase_coin', UserPurchaseCoin::class)->name('purchase.coin');
 
+
+
+    //?  Component Page
+    Route::get('/form-components', [HomeController::class, 'formDesign'])->name('form-components');
 });
 
 

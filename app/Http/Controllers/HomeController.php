@@ -25,7 +25,7 @@ class HomeController extends Controller
                 return redirect('/');
             }
             if ($usertype == 'admin') {
-             
+
                 return redirect('manage_dashboard');
             }else{
                 return redirect()->back();
@@ -55,5 +55,12 @@ class HomeController extends Controller
     public function submitRequest()
     {
         return view('frontend.pages.submit-request');
+    }
+
+    //?  form Design Page
+
+    public function formDesign()
+    {
+        return view('frontend.pages.form-components');
     }
 }
