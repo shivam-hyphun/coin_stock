@@ -79,10 +79,15 @@
                         </button>
                     </div>
                     <div class="flex">
-                        <button wire:click="PurchaseCoin"
-                                class="h-9 w-10 rounded-md border border-gray-700 transition-all duration-200 ease-in-out hover:bg-gray-700">
-                            <i class="ri-shopping-cart-2-line text-lg text-white"></i>
-                        </button>
+                        <livewire:purchase-coin.user-purchase-coin />
+                        @if($showForm)
+    <div>
+        <form wire:submit.prevent="submitForm">
+            <input type="text" wire:model="name" placeholder="Enter your name">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+@endif
                     </div>
                     <div class="flex">
                         <span class="whitespace-nowrap rounded-full bg-gray-700 px-2.5 py-1 text-sm text-white">

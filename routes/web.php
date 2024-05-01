@@ -11,7 +11,7 @@ use App\Livewire\Managecoin\CoinDetailsComponent;
 use App\Livewire\ManageUsers\UserDetailsComponent;
 use App\Livewire\ManageDashboard\AdminDashboardComponent;
 use App\Livewire\ManageProfile\UserProfileComponent;
-use App\Livewire\PurchaseCoin\UserPurchaseCoin;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -58,7 +58,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/manage_users', UserDetailsComponent::class)->middleware('auth', 'verified', 'admin')->name('manage.user');
     Route::get('/manage_dashboard', AdminDashboardComponent::class)->middleware('auth', 'verified', 'admin')->name('manage.dashboard');
     Route::get('/profile', UserProfileComponent::class)->name('manage.profile');
-    Route::get('/purchase_coin', UserPurchaseCoin::class)->name('purchase.coin');
+
 
 });
 
