@@ -13,6 +13,7 @@ use App\Livewire\ManageDashboard\AdminDashboardComponent;
 use App\Livewire\ManageProfile\UserProfileComponent;
 
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,6 +27,7 @@ use App\Livewire\ManageProfile\UserProfileComponent;
 
 Route::get('/', [HomeController::class, 'show']);
 
+Route::view('/dashboard', 'frontend.pages.user-dashboard');
 
 
 
@@ -39,34 +41,19 @@ Route::middleware('auth')->group(function () {
     Route::get('/coin-details', [HomeController::class, 'coinDetails'])->name('coin-details');
     Route::get('submit-request', [HomeController::class, 'submitRequest'])->name('submit-request');
 
-    // Admin routes
-    Route::get('/dashboard', [AdminController::class, 'index'])->middleware('auth', 'verified', 'admin')->name('admin_dashboard');
-    Route::get('/user_details', [AdminController::class, 'users'])->middleware('auth', 'verified', 'admin')->name('user_details');
-
-    Route::middleware(['auth', 'verified', 'admin'])->group(function () {
-        Route::resource('users', UserController::class);
-    });
-
-    // CoinsController
-    Route::resource('coin', CoinsController::class)->middleware('auth', 'verified', 'admin');
 
     // coins details though livewire
     Route::get('/manage_coins', ManageCoins::class)->middleware('auth', 'verified', 'admin')->name('manage.coin');
-    Route::get('/coin-details/{coin}', CoinDetailsComponent::class)->name('coin.details');
 
     // users details though livewire
     Route::get('/manage_users', UserDetailsComponent::class)->middleware('auth', 'verified', 'admin')->name('manage.user');
     Route::get('/manage_dashboard', AdminDashboardComponent::class)->middleware('auth', 'verified', 'admin')->name('manage.dashboard');
     Route::get('/profile', UserProfileComponent::class)->name('manage.profile');
 
-
-
-
-    //?  Component Page
-    Route::get('/form-components', [HomeController::class, 'formDesign'])->name('form-components');
 });
 
-
+// coins details though livewire
+Route::get('/coin-details/{coin}', CoinDetailsComponent::class)->name('coin.details');
 
 
 

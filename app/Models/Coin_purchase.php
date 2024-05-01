@@ -7,5 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Coin_purchase extends Model
 {
+
     use HasFactory;
+
+    protected $fillable = [
+        'coin_id',
+        'user_id',
+        'coin_price',
+        'quantity',
+        'total_price'
+    ];
 }

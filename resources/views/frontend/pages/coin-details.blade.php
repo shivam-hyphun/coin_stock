@@ -79,15 +79,8 @@
                         </button>
                     </div>
                     <div class="flex">
-                        <livewire:purchase-coin.user-purchase-coin />
-                        @if($showForm)
-    <div>
-        <form wire:submit.prevent="submitForm">
-            <input type="text" wire:model="name" placeholder="Enter your name">
-            <button type="submit">Submit</button>
-        </form>
-    </div>
-@endif
+                        <livewire:purchase-coin.user-purchase-coin :coinId="$coins->id" :coinPrice="$coins->price" />
+
                     </div>
                     <div class="flex">
                         <span class="whitespace-nowrap rounded-full bg-gray-700 px-2.5 py-1 text-sm text-white">
@@ -97,7 +90,7 @@
                 </div>
 
                 <div class="flex w-full items-center justify-start gap-2">
-                    <div class="relative h-16 w-full py-5 md:w-1/2">
+                    <div class="relative h-16 w-full  md:w-1/2">
                         <span id="ProgressLabel" class="sr-only">Loading</span>
 
                         <span role="progressbar" aria-labelledby="ProgressLabel" aria-valuenow="75"
@@ -550,6 +543,7 @@
 
         </div>
     </div>
+
 @endsection
 
 @push('scripts')
