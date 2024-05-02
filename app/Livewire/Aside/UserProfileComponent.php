@@ -18,14 +18,14 @@ class UserProfileComponent extends Component
     {
         $user = Auth::user();
         $this->userName = $user->name;
-        $this->userImage = $user->image ? asset('storage/' . $user->image) : asset('css/admin/dist/img/user2-160x160.jpg');
+        $this->userImage = $user->image ? asset('storage/users/' . $user->image) : asset('css/admin/dist/img/user2-160x160.jpg');
     }
     protected $listeners = ['profileUpdated'];
     public function profileUpdated()
     {
         $user = Auth::user();
         $this->userName = $user->name;
-        $this->userImage = $user->image ? asset('storage/' . $user->image) : asset('css/admin/dist/img/user2-160x160.jpg');
+        $this->userImage = $user->image ? asset('storage/users/' . $user->image) : asset('css/admin/dist/img/user2-160x160.jpg');
     }
 
     public function render()

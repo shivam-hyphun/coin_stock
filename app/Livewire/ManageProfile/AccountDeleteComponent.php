@@ -4,6 +4,8 @@ namespace App\Livewire\ManageProfile;
 
 use Livewire\Component;
 use Illuminate\Support\Facades\Auth;
+use App\Models\User;
+
 class AccountDeleteComponent extends Component
 {
     public $password;

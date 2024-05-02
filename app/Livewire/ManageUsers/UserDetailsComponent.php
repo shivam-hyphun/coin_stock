@@ -22,7 +22,7 @@ class UserDetailsComponent extends Component
     public $user_email = '';
     #[Validate('required')]
     public $user_name = '';
-    public $user_image = '';
+    public $user_image;
 
 
     public $password = '';
@@ -126,7 +126,7 @@ class UserDetailsComponent extends Component
     {
         User::find($id)->delete();
 
-        session()->flash('message', 'Product is deleted.');
+        session()->flash('message', 'User is deleted.');
     }
 
     public function render()

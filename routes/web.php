@@ -27,7 +27,7 @@ use App\Livewire\ManageProfile\UserProfileComponent;
 
 Route::get('/', [HomeController::class, 'show']);
 
-Route::view('/dashboard', 'frontend.pages.user-dashboard');
+
 
 
 
@@ -49,7 +49,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/manage_users', UserDetailsComponent::class)->middleware('auth', 'verified', 'admin')->name('manage.user');
     Route::get('/manage_dashboard', AdminDashboardComponent::class)->middleware('auth', 'verified', 'admin')->name('manage.dashboard');
     Route::get('/profile', UserProfileComponent::class)->name('manage.profile');
-
+    Route::view('/dashboard', 'frontend.pages.user-dashboard');
 });
 
 // coins details though livewire

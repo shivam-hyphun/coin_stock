@@ -2,9 +2,8 @@
 
 @section('content')
 
-    <div class="flex flex-col items-center justify-start gap-2 px-4 py-2 md:px-2">
+    <div class="flex flex-col items-center justify-start gap-2 px-4 py-2 md:px-2 mt-6">
 
-        @include('frontend.common.list-data')
 
 
         <div class="mx-auto flex w-full max-w-8xl flex-col items-center justify-between gap-3 py-5">
@@ -140,6 +139,8 @@
                                 <th class="pl-4 text-right font-normal">#</th>
                                 <th class="pl-4 text-left font-normal">Name</th>
                                 <th class="px-2 text-left font-normal">Price</th>
+                                <th class="px-2 text-left font-normal">Quantity</th>
+                                <th class="px-2 text-left font-normal">Total Price</th>
                                 <th class="px-2 text-left font-normal">1h %</th>
                                 <th class="px-2 text-left font-normal">24h%</th>
                                 <th class="px-2 text-left font-normal">7D%</th>
@@ -150,7 +151,7 @@
                             </tr>
                         </thead>
 
-                            <livewire:managecoin.home-coin-list-component />
+                            <livewire:user-dashboard.user-purchesed-coins-list-component/>
 
 
                         </tbody>

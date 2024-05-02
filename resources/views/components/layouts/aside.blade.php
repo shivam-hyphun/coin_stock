@@ -38,25 +38,37 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-          <li class="nav-item menu-open">
-            <a href="/home" class="nav-link active">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>
-                Dashboard
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
+               <li class="nav-item menu-open">
+                @if(auth()->user()->usertype !== 'admin')
+                    <a href="/dashboard" class="nav-link active">
+                @else
+                    <a href="/home" class="nav-link active">
+                @endif
+                    <i class="nav-icon fas fa-tachometer-alt"></i>
+                    <p>
+                        @if(auth()->user()->usertype !== 'admin')
+                        Home
 
-          </li>
+                        @else
+                        Dashboard
+
+                        @endif
+                        <i class="right fas fa-angle-left"></i>
+                    </p>
+                </a>
+            </li>
+          @if(auth()->user()->usertype == 'admin')
           <li class="nav-item">
-            <a href="{{ route('manage.coin') }}" class="nav-link">
-              <i class="nav-icon fab fa-bitcoin"></i>
-              <p>
-                Manage Coins
-                <span class="right badge badge-danger">New</span>
-              </p>
-            </a>
+              <a href="{{ route('manage.coin') }}" class="nav-link">
+                  <i class="nav-icon fab fa-bitcoin"></i>
+                  <p>
+                      Manage Coins
+                      <span class="right badge badge-danger">New</span>
+                  </p>
+              </a>
           </li>
+      @endif
+      @if(auth()->user()->usertype == 'admin')
           <li class="nav-item">
             <a href="{{ route('manage.user') }}" class="nav-link">
               <i class="nav-icon fas fa-user"></i>
@@ -66,6 +78,7 @@
               </p>
             </a>
           </li>
+          @endif
 
           {{-- <li class="nav-item">
             <a href="#" class="nav-link">

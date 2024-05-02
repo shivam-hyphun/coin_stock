@@ -6,13 +6,17 @@
     font-weight: normal;
     font-style: normal;
     color: #fff;
-    background-color: #0d1421;
+
 }
 
 /* Firefox */
 * {
     scrollbar-width: auto;
     scrollbar-color: #000000 #FFFFFF;
+}
+
+body{
+    background-color: #0d1421;
 }
 
 ::-webkit-scrollbar {

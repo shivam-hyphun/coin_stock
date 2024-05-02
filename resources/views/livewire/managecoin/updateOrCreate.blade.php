@@ -29,7 +29,7 @@
                                     <span class="text-danger">{{ $errors->first('coin_name') }}</span>
                                 @endif
                             </div>
-                            <div class="form-group">
+                            <div class="form-group">`
                                 <label for="short_name">Short Name</label>
                                 <input type="text" class="form-control @error('short_name') is-invalid @enderror"
                                     id="short_name" name="short_name" wire:model="short_name">

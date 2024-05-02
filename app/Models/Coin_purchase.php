@@ -17,4 +17,9 @@ class Coin_purchase extends Model
         'quantity',
         'total_price'
     ];
+
+    public function coins()
+    {
+        return $this->belongsTo(Coins::class, 'coin_id');
+    }
 }

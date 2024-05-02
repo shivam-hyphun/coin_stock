@@ -46,7 +46,7 @@ class ManageCoins extends Component
     #[Validate('required')]
     public $coin_ucid = '';
     #[Validate('required')]
-    public $coin_image = '';
+    public $coin_image;
 
     public $tags = [];
     public $newTag = '';

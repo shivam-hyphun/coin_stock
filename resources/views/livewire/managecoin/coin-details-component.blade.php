@@ -56,7 +56,7 @@
             </div>
         </div>
 
-        <div class="flex w-full items-center justify-start gap-2">
+        <div class="flex w-full items-center justify-start gap-2" >
             <div class="relative h-16 w-full  md:w-1/2">
                 <span id="ProgressLabel" class="sr-only">Loading</span>
 

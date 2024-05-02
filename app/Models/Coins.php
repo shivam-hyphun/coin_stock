@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Coins extends Model
 {
     use HasFactory;
-    
+
     protected $table = 'coins';
 
     protected $fillable = [
@@ -33,5 +33,9 @@ class Coins extends Model
     public function links()
     {
         return $this->hasMany(Links::class, 'coin_id');
+    }
+    public function purchesdCoin()
+    {
+        return $this->hasMany(Coin_purchase::class, 'coin_id');
     }
 }

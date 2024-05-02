@@ -6,7 +6,7 @@
         <div class="fixed inset-0 flex items-center justify-center">
             <div class="bg-white p-8 rounded-lg shadow-lg">
                 {{-- <h2 class="text-2xl font-semibold mb-4">Purchase Form</h2> --}}
-                <section class="max-w-4xl p-6 mx-auto rounded-md shadow-md border border-gray-300">
+                <section class="max-w-4xl p-6 mx-auto rounded-md shadow-md border border-gray-300" style="    background-color: #0d1421;">
                     <div class="flex justify-between items-center">
                         <h2 class="text-lg font-semibold text-gray-200 capitalize">Purchase Coin </h2>
 

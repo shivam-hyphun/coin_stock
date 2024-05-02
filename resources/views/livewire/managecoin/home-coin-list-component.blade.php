@@ -30,7 +30,7 @@ class="h-20 cursor-pointer border-b border-t border-gray-700 bg-dark-black text-
     </a>
 </td>
 <td class="px-2">
-    <p class="text-sm font-medium">${{ $coin->price }}</p>
+    <p class="text-sm font-medium">${{ number_format($coin->price,2) }}</p>
 
 </td>
 <td class="px-2">
@@ -46,14 +46,14 @@ class="h-20 cursor-pointer border-b border-t border-gray-700 bg-dark-black text-
     <p class="text-sm font-medium">$42,778.91</p>
 </td>
 <td class="px-2">
-    <p class="text-sm font-medium">${{ $coin->market_capacity }}</p>
+    <p class="text-sm font-medium">${{number_format( $coin->market_capacity,2) }}</p>
 </td>
 <td class="px-2">
-    <p class="text-sm font-medium">${{ $coin->volume }}</p>
+    <p class="text-sm font-medium">${{ number_format($coin->volume,2) }}</p>
     <p class="mt-2 text-xs leading-3 text-gray-600">5 tasks pending</p>
 </td>
 <td class="px-2">
-    <p class="text-sm font-medium">{{ $coin->circulating_supply }}</p>
+    <p class="text-sm font-medium">{{ number_format($coin->circulating_supply,2) }}</p>
     <div class="mt-2 h-1.5 w-24 rounded-full bg-gray-100">
         <div class="bg-green-progress h-1.5 w-20 rounded-full"></div>
     </div>

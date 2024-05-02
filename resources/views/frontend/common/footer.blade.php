@@ -2,7 +2,7 @@
 
     <div class="mx-auto flex w-full max-w-8xl flex-col justify-between py-10 md:flex-row">
         <div class="flex w-full items-baseline justify-start py-10 md:w-1/2">
-            <a href="{{ route('home') }}">
+            <a href="/">
                 <img src="{{ asset('images/logo.svg') }}" alt="logo" class="w-32">
             </a>
         </div>
