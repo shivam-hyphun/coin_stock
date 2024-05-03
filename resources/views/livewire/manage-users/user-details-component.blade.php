@@ -1,4 +1,3 @@
-
 <div class="content-wrapper">
     <div class="content-header">
         <div class="container-fluid">
@@ -65,19 +64,55 @@
                                                 <td>{{ $user->name }}</td>
                                                 <td>{{ $user->email }}</td>
                                                 <td>
-                                                    @if($user->image)
-                                                        <img src="{{ asset('storage/users/'.$user->image) }}" alt="Profile Picture" class="img-fluid" style="height:2rem;width:2rem">
+                                                    @if ($user->image)
+                                                        <img src="{{ asset('storage/users/' . $user->image) }}"
+                                                            alt="Profile Picture" class="img-fluid"
+                                                            style="height:2rem;width:2rem">
                                                     @else
                                                         <p>No image uploaded for this user.</p>
                                                     @endif
                                                 </td>
                                                 <td>
-                                                    <button wire:click="edit({{ $user->id }})" class="btn btn-primary btn-sm my-1">
+                                                    <button wire:click="edit({{ $user->id }})"
+                                                        class="btn btn-primary btn-sm my-1">
                                                         <i class="fas fa-edit fa-fw"></i>
                                                     </button>
-                                                    <button wire:click="delete({{ $user->id }})" wire:confirm="Are you sure you want to delete this User?" class="btn btn-danger btn-sm">
+                                                    <button wire:click="confirmDelete({{ $user->id }})"
+                                                        class="btn btn-danger btn-sm">
                                                         <i class="fas fa-trash-alt fa-fw"></i>
                                                     </button>
+
+
+
+
+
+                                                    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+                                                    <script>
+                                                        document.addEventListener('DOMContentLoaded', function() {
+                                                            Livewire.on('confirmDeleteAction', function(userId) {
+                                                                swal({
+                                                                        title: "Are you sure?",
+                                                                        text: "Once deleted, you will not be able to recover this user!",
+                                                                        icon: "warning",
+                                                                        buttons: true,
+                                                                        dangerMode: true,
+                                                                    })
+                                                                    .then((willDelete) => {
+                                                                        if (willDelete) {
+                                                                            Livewire.dispatch('delete', userId);
+                                                                        }
+                                                                    });
+                                                            });
+
+                                                            Livewire.on('delete-success', function(data) {
+                                                                swal(data.message, {
+                                                                    icon: "success",
+                                                                });
+                                                            });
+                                                        });
+                                                    </script>
+
                                                 </td>
                                             </tr>
                                         @empty
